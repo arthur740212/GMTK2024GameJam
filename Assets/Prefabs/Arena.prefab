@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 7096013570926358402}
   - component: {fileID: 7377792245722690132}
   - component: {fileID: 7130312104252817527}
+  - component: {fileID: 4693651505062158824}
   m_Layer: 0
   m_Name: Arena
   m_TagString: Untagged
@@ -652,6 +653,35 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &4693651505062158824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3668675872572300193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478b289366e3c264d99d64828fd22561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AreaBlockGameObjects:
+  - {fileID: 5783686186339574719}
+  - {fileID: 1130265480344910066}
+  - {fileID: 7999169827448530000}
+  - {fileID: 1387508706810530480}
+  - {fileID: 5899838321724405957}
+  - {fileID: 4492284365462994770}
+  - {fileID: 6127100149027013205}
+  - {fileID: 6148345887387270122}
+  - {fileID: 387353558386785466}
+  - {fileID: 1620390109629588765}
+  - {fileID: 6585241785708699721}
+  - {fileID: 2828555951706687330}
+  - {fileID: 8300184842705783978}
+  - {fileID: 6555418828918768622}
+  - {fileID: 4036534513313413517}
+  - {fileID: 4851819683328198666}
 --- !u!1 &4036534513313413517
 GameObject:
   m_ObjectHideFlags: 0
