@@ -12,7 +12,7 @@ public class UIDebug : MonoBehaviour
     private void Awake()
     {
         Button_AddRandomCap.onClick.AddListener(pcc.AddRandomCap);
-        foreach (var typeCount in pcc.CountPerCapType)
+        foreach (var typeCount in pcc.TallyPerCapType)
         {
             TypeCounts.Add(Instantiate(new GameObject("TypeCountText"),transform).AddComponent<Text>());
         }
@@ -22,7 +22,7 @@ public class UIDebug : MonoBehaviour
     { 
         for (int i = 0; i < TypeCounts.Count; i++) 
         {
-            TypeCounts[i].text = $"{(CapType)i} : {pcc.CountPerCapType[(CapType)i]}";
+            TypeCounts[i].text = $"{pcc.TallyPerCapType[i].Type} : {pcc.TallyPerCapType[i].Count}";
         }
     }
 }

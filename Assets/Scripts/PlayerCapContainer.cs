@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,14 +7,17 @@ public class PlayerCapContainer : MonoBehaviour
     public event Action OnCollectedCapsChange;
     public int Capacity { get { return capacity; } }
     public List<Cap> CollectedCaps { get { return collectedCaps; } }
-    public Dictionary<CapType, int> CountPerCapType { get { return countPerCapType; } }
+    public List<Tally> TallyPerCapType { get { return tallyPerCapType; } }
+
+    public Tally TallyPrefab;
 
     public void AddCap(Cap pickedUpCap)
     {
         if (collectedCaps.Count < capacity)
         {
-            collectedCaps.Add(pickedUpCap);       
+            collectedCaps.Add(pickedUpCap);
             CollectedCapsUpdate();
+            CheckCompletedSets();
         }
     }
 
@@ -28,16 +30,28 @@ public class PlayerCapContainer : MonoBehaviour
         }
     }
 
-    public void FlushCapType(CapType type)
+    public void CheckCompletedSets() 
     {
-        foreach (var cap in collectedCaps)
+        foreach (var tally in tallyPerCapType) 
         {
-            if (cap.Type == type) 
+            if (tally.PassedThreshold()) 
             {
-                collectedCaps.Remove(cap);
+                FlushCompletedSet(tally.Type);
+                
             }
         }
+    }
 
+    public void FlushCompletedSet(CapType type)
+    {
+        for (int i = collectedCaps.Count - 1; i >= 0; i--)
+        {
+            if (collectedCaps[i].Type == type)
+            {
+                Destroy(collectedCaps[i].gameObject);
+                collectedCaps.Remove(collectedCaps[i]);
+            }
+        }
         CollectedCapsUpdate();
     } 
 
@@ -46,12 +60,12 @@ public class PlayerCapContainer : MonoBehaviour
     [SerializeField]
     private List<Cap> collectedCaps = new();
     [SerializeField]
-    private Dictionary<CapType, int> countPerCapType = new();
+    private List<Tally> tallyPerCapType = new();
     private void Awake()
     {
         foreach (var type in EnumHelper.GetEnumList<CapType>())
         {
-            countPerCapType[type] = 0;
+            tallyPerCapType.Add(Instantiate(TallyPrefab, transform).Initialized(type));
         }
     }
 
@@ -64,12 +78,12 @@ public class PlayerCapContainer : MonoBehaviour
     private void TallyCollectedCaps()
     {
         foreach (var type in EnumHelper.GetEnumList<CapType>())
-        { 
-            countPerCapType[type] = 0;
+        {
+            tallyPerCapType[(int)type].Count = 0;
         }
         foreach (var cap in collectedCaps)
         {
-            countPerCapType[cap.Type] += 1;
+            tallyPerCapType[(int)cap.Type].Count += 1;
         }
     }
 }
