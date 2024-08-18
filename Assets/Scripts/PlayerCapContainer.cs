@@ -21,6 +21,8 @@ public class PlayerCapContainer : MonoBehaviour
             playerStats.Pickup(pickedUpCap.Type);
 
             CollectedCapsUpdate();
+            CheckOverflowedSets();
+
             if (collectedCaps.Count == capacity)
             {
                 DecideLevelUp();
@@ -39,12 +41,12 @@ public class PlayerCapContainer : MonoBehaviour
     }
 
 
-    public void DecideLevelUp() 
+    public void DecideLevelUp()
     {
         int highestCount = 0;
         List<int> highestTypes = new();
 
-        for (int i = 0; i < TallyPerCapType.Count; i++) 
+        for (int i = 0; i < TallyPerCapType.Count; i++)
         {
             if (TallyPerCapType[i].Count > highestCount)
             {
@@ -60,6 +62,12 @@ public class PlayerCapContainer : MonoBehaviour
 
         playerStats.LevelUp(TallyPerCapType[highestTypes[UnityEngine.Random.Range(0, highestTypes.Count)]].Type);
 
+        FlushAllCaps();
+
+    }
+
+    public void FlushAllCaps()
+    {
         for (int i = collectedCaps.Count - 1; i >= 0; i--)
         {
             Destroy(collectedCaps[i].gameObject);
@@ -67,6 +75,19 @@ public class PlayerCapContainer : MonoBehaviour
         }
 
         CollectedCapsUpdate();
+
+    }
+
+    public void CheckOverflowedSets()
+    {
+        foreach (var tally in tallyPerCapType)
+        {
+            if (tally.PassedThreshold())
+            {
+                FlushAllCaps();
+                return;
+            }
+        }
     }
 
     public void CheckCompletedSets() 
