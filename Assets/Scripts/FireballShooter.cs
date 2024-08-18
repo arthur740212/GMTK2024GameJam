@@ -7,10 +7,15 @@ public class FireballShooter : MonoBehaviour
     public Stat Stat_Cooldown;
     public GameObject FireballPrefab;
 
+
     public float remaining_cooldown = 0.1f;
     public void Shoot() 
     {
-        Instantiate(FireballPrefab);
+        Instantiate(FireballPrefab, transform.position, transform.rotation);
+    }
+
+    private void Start()
+    {
     }
 
     private void Update()
