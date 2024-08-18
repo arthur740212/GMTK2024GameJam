@@ -28,12 +28,12 @@ public class Tally : MonoBehaviour
     private void UpdateTallyVisual()
     {
         Vector3 pos = transform.localPosition;
-        pos.x = -10 + pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate * 0.5f;
-        pos.y = -TypeAsInt;
+        pos.y = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate * 0.5f;
+        pos.x = -TypeAsInt;
         transform.localPosition = pos;
 
         Vector3 scale = transform.localScale;
-        scale.x = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate;
+        scale.y = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate;
         transform.localScale = scale;
     }
 
