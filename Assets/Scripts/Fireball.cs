@@ -6,8 +6,6 @@ public class Fireball : MonoBehaviour
 {
 
     public GameObject target;
-    //Vector3 targetPos = new Vector3(0.0f, 0.0f, 40.0f);
-    
     public Stat Stat_Damage;
     
 
