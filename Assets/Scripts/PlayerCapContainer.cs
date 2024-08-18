@@ -127,10 +127,10 @@ public class PlayerCapContainer : MonoBehaviour
         {
             playerStats = gameObject.AddComponent<PlayerStats>();
         }
-        foreach (var type in EnumHelper.GetEnumList<CapType>())
-        {
-            tallyPerCapType.Add(Instantiate(TallyPrefab, transform).Initialized(type));
-        }
+        //foreach (var type in EnumHelper.GetEnumList<CapType>())
+        //{
+        //    tallyPerCapType.Add(Instantiate(TallyPrefab, transform).Initialized(type));
+        //}
     }
 
     private void CollectedCapsUpdate()
