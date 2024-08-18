@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Tally : MonoBehaviour
 {
-    public float TallyScaleRate = 2.0f;
+    public float TallyScaleRate = 10.0f;
     public Material material;
+
     public Tally Initialized(CapType type)
     {
         Type = type;
@@ -13,12 +15,13 @@ public class Tally : MonoBehaviour
 
     private void Awake()
     {
-        pcc = gameObject.GetComponentInParent<PlayerCapContainer>();
+        //pcc = gameObject.GetComponentInParent<PlayerCapContainer>();
         pcc.OnCollectedCapsChange += UpdateTallyVisual;
+        rectTransform = GetComponent<RectTransform>();  
 
-        MaterialPropertyBlock MPB = new();
-        MPB.SetColor("_Color", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
-        GetComponent<MeshRenderer>().SetPropertyBlock(MPB);
+        //MaterialPropertyBlock MPB = new();
+        //MPB.SetColor("_Color", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
+        //GetComponent<MeshRenderer>().SetPropertyBlock(MPB);
     }
     public bool PassedThreshold()
     {
@@ -27,14 +30,16 @@ public class Tally : MonoBehaviour
 
     private void UpdateTallyVisual()
     {
-        Vector3 pos = transform.localPosition;
-        pos.x = -10 + pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate * 0.5f;
-        pos.y = -TypeAsInt;
-        transform.localPosition = pos;
+        rectTransform.sizeDelta = new Vector2(20, pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate);
 
-        Vector3 scale = transform.localScale;
-        scale.x = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate;
-        transform.localScale = scale;
+        //Vector3 pos = transform.localPosition;
+        //pos.y = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate * 0.5f;
+        //pos.x = -TypeAsInt;
+        //transform.localPosition = pos;
+
+        //Vector3 scale = transform.localScale;
+        //scale.y = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate;
+        //transform.localScale = scale;
     }
 
     public int Count;
@@ -44,4 +49,5 @@ public class Tally : MonoBehaviour
 
     [SerializeField]
     private PlayerCapContainer pcc;
+    private RectTransform rectTransform;
 }
