@@ -2,9 +2,10 @@ using UnityEngine;
 
 public enum CapType
 {
-    Blue,
     Red,
-    Yellow
+    Green,
+    Yellow,
+    Blue,
 }
 
 public class Cap : MonoBehaviour
