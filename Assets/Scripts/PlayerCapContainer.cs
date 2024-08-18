@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerCapContainer : MonoBehaviour
 {
     public event Action OnCollectedCapsChange;
+
+    public PlayerStats playerStats;
     public int Capacity { get { return capacity; } }
     public List<Cap> CollectedCaps { get { return collectedCaps; } }
     public List<Tally> TallyPerCapType { get { return tallyPerCapType; } }
@@ -16,6 +18,8 @@ public class PlayerCapContainer : MonoBehaviour
         if (collectedCaps.Count < capacity)
         {
             collectedCaps.Add(pickedUpCap);
+            playerStats.Pickup(pickedUpCap.Type);
+
             CollectedCapsUpdate();
             CheckCompletedSets();
         }
@@ -37,7 +41,7 @@ public class PlayerCapContainer : MonoBehaviour
             if (tally.PassedThreshold()) 
             {
                 FlushCompletedSet(tally.Type);
-                
+                playerStats.LevelUp(tally.Type);
             }
         }
     }
