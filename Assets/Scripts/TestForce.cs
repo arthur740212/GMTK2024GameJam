@@ -10,7 +10,7 @@ public class TestForce : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Vector3 direction = (collision.transform.position - transform.position).normalized;
-            PlayerController controller = collision.gameObject.GetComponent<PlayerController>();
+            TestPlayerController controller = collision.gameObject.GetComponent<TestPlayerController>();
             if (controller != null)
             {
                 controller.ApplyExternalForce(direction * force);
