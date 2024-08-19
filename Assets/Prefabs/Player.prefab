@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stat_Cooldown: {fileID: 11400000, guid: 42ef58c394d3366489853486cc6bf166, type: 2}
-  FireballPrefab: {fileID: 8187554877478771114, guid: 7174d5b020a36694291e0e94b7a0751f, type: 3}
+  FireballPrefab: {fileID: 3007010256405525432, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
   remaining_cooldown: 0.1
 --- !u!1 &4239526803026166437
 GameObject:
@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b606281f8c9356429c3f71faa971f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 0}
   TallyPrefab: {fileID: 6162628233614298391, guid: c066029765ac34f47a6d8513ebae8f51, type: 3}
   capacity: 20
   collectedCaps: []
