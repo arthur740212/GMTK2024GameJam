@@ -35,6 +35,9 @@ public class PlayerStats : MonoBehaviour
     private int AddHealthAmount = 10;
     private int AddManaAmount = 10;
 
+    public ParticleSystem AddHealthParticle;
+    public ParticleSystem AddManaParticle;
+
     public List<int> Fibo = new List<int>();
 
     private void Update()
@@ -63,6 +66,7 @@ public class PlayerStats : MonoBehaviour
 
     private void AddHealth()
     {
+        AddHealthParticle.Play();
         Health += AddHealthAmount;
         Health = Mathf.Min(Health, MaxHealth);
     }
@@ -74,6 +78,7 @@ public class PlayerStats : MonoBehaviour
     }
     private void AddMana()
     {
+        AddManaParticle.Play();
         Mana += AddManaAmount;
         Mana = Mathf.Min(Mana, MaxMana);
     }
