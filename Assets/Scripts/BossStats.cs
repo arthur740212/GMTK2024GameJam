@@ -3,7 +3,8 @@ using UnityEngine;
 public class BossStats : MonoBehaviour
 {
     [SerializeField]
-    private int BossHealth = 10000000;
+    public int BossHealth = 50;
+    public int BossMaxHealth = 10000000;
 
     [SerializeField]
     private int BossPower = 1;
@@ -15,15 +16,26 @@ public class BossStats : MonoBehaviour
 
     public GameObject BossAttackPrefab;
 
+    public HitParticle BossHitParticle;
+
+    private void Awake()
+    {
+        if (BossHealth > BossMaxHealth)
+        {
+            BossHealth = BossMaxHealth;
+        }
+    }
     public void DealDamage(int damage) 
     {
         BossHealth -= damage;
     }
-    private void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Fireball")
+        if (other.CompareTag("Fireball"))
         {
-            collision.gameObject.SetActive(false);
+            other.gameObject.SetActive(false);
+            BossHitParticle.transform.position = other.gameObject.transform.position;
+            BossHitParticle.PlayAllParticleSystems();
             DealDamage(2);
         }
     }

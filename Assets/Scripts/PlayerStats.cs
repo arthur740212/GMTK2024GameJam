@@ -30,9 +30,13 @@ public class PlayerStats : MonoBehaviour
 
     public int Health = 100;
     public int Mana = 100;
+    public Shield Shield;
 
     private int AddHealthAmount = 10;
     private int AddManaAmount = 10;
+
+    public ParticleSystem AddHealthParticle;
+    public ParticleSystem AddManaParticle;
 
     public List<int> Fibo = new List<int>();
 
@@ -62,23 +66,27 @@ public class PlayerStats : MonoBehaviour
 
     private void AddHealth()
     {
-        Debug.Log("Health up");
+        AddHealthParticle.Play();
         Health += AddHealthAmount;
         Health = Mathf.Min(Health, MaxHealth);
     }
+
     private void ApplyShield()
     {
         Debug.Log("New Shilewed");
-
+        Shield.shieldOn = true;
     }
     private void AddMana()
     {
-        Debug.Log("Mana up");
-
+        AddManaParticle.Play();
         Mana += AddManaAmount;
         Mana = Mathf.Min(Mana, MaxMana);
     }
 
+    public void LoseHealth(int damage) 
+    {
+        Health -= damage;
+    }
     private void FiboInit()
     {
         Fibo.Add(1);
