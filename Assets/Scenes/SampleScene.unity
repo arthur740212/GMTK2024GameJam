@@ -561,6 +561,11 @@ MonoBehaviour:
   Type: 2
   TypeAsInt: 0
   pcc: {fileID: 1013040653}
+--- !u!1 &1353440744 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3668675872572300193, guid: 3f152b0d81b98964bb852fd6697310eb, type: 3}
+  m_PrefabInstance: {fileID: 1498225453020812398}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1528146665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,12 +1351,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4693651505062158824, guid: 3f152b0d81b98964bb852fd6697310eb, type: 3}
       propertyPath: HatPrefab.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4693651505062158824, guid: 3f152b0d81b98964bb852fd6697310eb, type: 3}
       propertyPath: HatPrefab.Array.data[0]
       value: 
       objectReference: {fileID: 826275618615662661, guid: 2e3f95feebeefab44a11c7eb91889eec, type: 3}
+    - target: {fileID: 4693651505062158824, guid: 3f152b0d81b98964bb852fd6697310eb, type: 3}
+      propertyPath: HatPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 826275618615662661, guid: 90610db50dc4c4b4bb8022cd625bc619, type: 3}
+    - target: {fileID: 4693651505062158824, guid: 3f152b0d81b98964bb852fd6697310eb, type: 3}
+      propertyPath: HatPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 826275618615662661, guid: 5ce58733e9c49594eaeadccc3860c7ae, type: 3}
+    - target: {fileID: 4693651505062158824, guid: 3f152b0d81b98964bb852fd6697310eb, type: 3}
+      propertyPath: HatPrefab.Array.data[3]
+      value: 
+      objectReference: {fileID: 826275618615662661, guid: 67d39637b10f7e246b887e2130535f0a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1409,10 +1426,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6042707868447908108, guid: 8377062b4a6b81048a60a3e85948ed05, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.25
-      objectReference: {fileID: 0}
+    - target: {fileID: 4871616805429153540, guid: 8377062b4a6b81048a60a3e85948ed05, type: 3}
+      propertyPath: arena
+      value: 
+      objectReference: {fileID: 1353440744}
+    - target: {fileID: 4871616805429153540, guid: 8377062b4a6b81048a60a3e85948ed05, type: 3}
+      propertyPath: halfBladePrefab
+      value: 
+      objectReference: {fileID: 3477885360574326960, guid: a49f1c24161fa9844810bb1b6ef37c5b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
