@@ -149,10 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1310a88b5dcaf49b2a63dca4319723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Stat_Cooldown: {fileID: 11400000, guid: 42ef58c394d3366489853486cc6bf166, type: 2}
   FireballPrefab: {fileID: -6386967100474926293, guid: 27545c03fdf4ff14e9d441d3a2964831, type: 3}
   playerStats: {fileID: -2099468591281039669}
-  remaining_cooldown: 0.1
+  ManaCost: 2
 --- !u!1 &4239526803026166437
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +282,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: -2099468591281039669}
   TallyPrefab: {fileID: 6162628233614298391, guid: c066029765ac34f47a6d8513ebae8f51, type: 3}
+  capModels:
+  - {fileID: 826275618615662661, guid: 8ac3479cac2318c4a9b0aaea6fc79d51, type: 3}
+  - {fileID: 826275618615662661, guid: 3d576be6f42a5cd46a23ae62e8b80533, type: 3}
+  - {fileID: 826275618615662661, guid: 7d368b858311d5f4580b7646a73d1e87, type: 3}
+  - {fileID: 826275618615662661, guid: b9165b13e8e5f3947b53fa074f6de145, type: 3}
+  spacing: 0.6
+  playerHeadPosY: 1.5
   capacity: 20
   collectedCaps: []
   tallyPerCapType:
@@ -353,10 +359,11 @@ MonoBehaviour:
   MaxHealth: 10000
   Armor: 1
   MaxMana: 10000
-  Projectiles: 0
+  AttackRegen: 2
   HealthRegen: 5
   ShieldRegen: 2
   ManaRegen: 5
+  AttackCD: 1
   Health: 100
   Mana: 100
   Shield: {fileID: 7488349628614882635}
