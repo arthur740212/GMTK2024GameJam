@@ -60,10 +60,27 @@ public class PlayerCapContainer : MonoBehaviour
             }
         }
 
-        playerStats.LevelUp(TallyPerCapType[highestTypes[UnityEngine.Random.Range(0, highestTypes.Count)]].Type);
+        Tally upgradeTypeTally = TallyPerCapType[highestTypes[UnityEngine.Random.Range(0, highestTypes.Count)]];
+        highestTypes.Clear();
+        playerStats.LevelUp(upgradeTypeTally.Type);
+        WearCap(upgradeTypeTally.TypeAsInt);
 
         FlushAllCaps();
 
+    }
+
+    public List<GameObject> capModels;
+    private int WornCapCount = 0;
+    public float spacing = 0.6f;
+    public float playerHeadPosY = 1.5f;
+
+    public void WearCap(int TypeAsInt) 
+    {
+        Vector3 pos = Vector3.zero;
+        pos.y = playerHeadPosY + WornCapCount * spacing;
+        var newCap = Instantiate(capModels[TypeAsInt], transform);
+        newCap.transform.localPosition = pos;
+        WornCapCount++;
     }
 
     public void FlushAllCaps()
