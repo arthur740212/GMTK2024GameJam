@@ -5,13 +5,14 @@ using UnityEngine;
 public class FireballShooter : MonoBehaviour
 {
     public Stat Stat_Cooldown;
-    public GameObject FireballPrefab;
-
+    public Fireball FireballPrefab;
+    public PlayerStats playerStats;
 
     public float remaining_cooldown = 0.1f;
     public void Shoot() 
     {
-        Instantiate(FireballPrefab, transform.position, transform.rotation);
+        var obj = Instantiate(FireballPrefab, transform.position, transform.rotation);
+        obj.damage = playerStats.Damage;
     }
 
     private void Start()

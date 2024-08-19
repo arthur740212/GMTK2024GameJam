@@ -15,12 +15,18 @@ public class BossStats : MonoBehaviour
 
     public GameObject BossAttackPrefab;
 
-
     public void DealDamage(int damage) 
     {
         BossHealth -= damage;
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Fireball")
+        {
+            collision.gameObject.SetActive(false);
+            DealDamage(2);
+        }
+    }
     private void Update()
     {
         SecondsToBossLevelup -= Time.deltaTime;

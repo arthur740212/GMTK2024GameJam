@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class Move3DObjectToUI : MonoBehaviour
     public float nearPlaneOffset = 5f;
     public float movementSpeed = 50.0f;
 
+    public Action OnMoveComplete;
     private void Start()
     {
         objectToMove = this.gameObject.transform;
@@ -31,7 +33,9 @@ public class Move3DObjectToUI : MonoBehaviour
 
         if (Vector3.Distance(objectToMove.position, uiTargetWorldPos) < 0.1f)
         {
-            Destroy(objectToMove.gameObject);
+            OnMoveComplete.Invoke();
+            OnMoveComplete = null;
+            enabled = false;
         }
     }
 }
