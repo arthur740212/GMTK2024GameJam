@@ -318,7 +318,7 @@ MonoBehaviour:
   Count: 0
   Threshold: 3
   Type: 2
-  TypeAsInt: 0
+  TypeAsInt: 2
   pcc: {fileID: 0}
 --- !u!1 &3283896120112232556
 GameObject:
@@ -413,7 +413,7 @@ MonoBehaviour:
   Count: 0
   Threshold: 3
   Type: 3
-  TypeAsInt: 0
+  TypeAsInt: 3
   pcc: {fileID: 0}
 --- !u!1 &4411724508848877770
 GameObject:
@@ -678,7 +678,7 @@ MonoBehaviour:
   Count: 0
   Threshold: 3
   Type: 1
-  TypeAsInt: 0
+  TypeAsInt: 1
   pcc: {fileID: 0}
 --- !u!1 &8105516447623945330
 GameObject:
