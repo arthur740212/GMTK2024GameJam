@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public enum CapType
@@ -18,9 +19,13 @@ public class Cap : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.gameObject.GetComponent<PlayerCapContainer>().AddCap(this);
-        this.GetComponent<Collider>().enabled = false;
+        mover.OnMoveComplete += () => other.gameObject.GetComponent<PlayerCapContainer>().AddCap(this);
+
+        capCollider.enabled = false;
+        mover.enabled = true;
     }
 
+    public Collider capCollider;
+    public Move3DObjectToUI mover;
     public CapType Type;
 }

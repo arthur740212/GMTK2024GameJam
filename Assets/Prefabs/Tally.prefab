@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e311287fb442644be7615b13773652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TallyScaleRate: 2
+  TallyScaleRate: 20
   material: {fileID: 2100000, guid: f929b41498015a444b8ea4e2cc354772, type: 2}
   Count: 0
   Threshold: 3

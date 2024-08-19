@@ -22,8 +22,8 @@ public class PlayerController : MonoBehaviour
 
     private void Movement()
     {
-        var horizontal = Input.GetAxis("Horizontal");
-        var vertical = Input.GetAxis("Vertical");
+        var horizontal = Input.GetAxisRaw("Horizontal");
+        var vertical = Input.GetAxisRaw("Vertical");
 
         //direction movement
         var direction = new Vector3( horizontal, 0, vertical).normalized;
@@ -31,9 +31,15 @@ public class PlayerController : MonoBehaviour
         controller.Move(move);
 
         //rotation
-        var angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, angle, transform.eulerAngles.z);
 
+        //var angle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
+        //transform.eulerAngles = new Vector3(transform.eulerAngles.x, angle, transform.eulerAngles.z);
+
+        if (direction != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+        }
 
         // mouse rotation
         //var playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);

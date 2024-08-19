@@ -15,16 +15,69 @@ public class PlayerStats : MonoBehaviour
     public int Blue_level = 1;
 
     public int Damage = 1;
-    public int MaxHealth = 100;
+    public int MaxHealth = 10000;
     public int Armor = 1;
-    public int MaxMana = 100;
+    public int MaxMana = 10000;
 
     public float Projectiles;
-    public float HealthRegen;
-    public float ShieldRegen;
-    public float ManaRegen;
+    public float HealthRegen=1.0f;
+    public float ShieldRegen=2.0f;
+    public float ManaRegen=3.0f;
+
+    private float HealthCD = 1.0f;
+    private float ShieldCD = 2.0f;
+    private float ManaCD = 3.0f;
+
+    public int Health = 100;
+    public int Mana = 100;
+
+    private int AddHealthAmount = 10;
+    private int AddManaAmount = 10;
 
     public List<int> Fibo = new List<int>();
+
+    private void Update()
+    {
+        HealthCD -= Time.deltaTime;
+        ShieldCD -= Time.deltaTime;
+        ManaCD -= Time.deltaTime;
+
+        if (HealthCD < 0.0f)
+        {
+            AddHealth();
+            HealthCD += HealthRegen;
+        }
+
+        if (ShieldCD < 0.0f) 
+        {
+            ApplyShield();
+            ShieldCD += ShieldRegen;
+        }
+        if (ManaCD < 0.0f) 
+        {
+            AddMana();
+            ManaCD += ManaRegen; 
+        }
+    }
+
+    private void AddHealth()
+    {
+        Debug.Log("Health up");
+        Health += AddHealthAmount;
+        Health = Mathf.Min(Health, MaxHealth);
+    }
+    private void ApplyShield()
+    {
+        Debug.Log("New Shilewed");
+
+    }
+    private void AddMana()
+    {
+        Debug.Log("Mana up");
+
+        Mana += AddManaAmount;
+        Mana = Mathf.Min(Mana, MaxMana);
+    }
 
     private void FiboInit()
     {
@@ -69,14 +122,19 @@ public class PlayerStats : MonoBehaviour
                 break;
             case CapType.Green:
                 Green_level++;
+                HealthRegen = Green_Stat.Value;
                 break;
             case CapType.Yellow:
                 Yellow_level++;
+                ShieldRegen = Yellow_Stat.Value;
                 break;
             case CapType.Blue:
                 Blue_level++;
+                ManaRegen = Blue_Stat.Value;
                 break;
         }
     }
+
+
 
 }

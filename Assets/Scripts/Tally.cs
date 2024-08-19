@@ -30,7 +30,7 @@ public class Tally : MonoBehaviour
 
     private void UpdateTallyVisual()
     {
-        rectTransform.sizeDelta = new Vector2(20, pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate);
+        rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate);
 
         //Vector3 pos = transform.localPosition;
         //pos.y = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate * 0.5f;

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2129527997287681679}
   - component: {fileID: 9218565497914468229}
   - component: {fileID: 6187166554946485862}
+  - component: {fileID: 1205890727458936131}
   m_Layer: 0
   m_Name: Green Hat
   m_TagString: Untagged
@@ -118,4 +119,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63bc05e5f74a6fa4baf66f7e6c9efe2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  capCollider: {fileID: 9218565497914468229}
+  mover: {fileID: 1205890727458936131}
   Type: 1
+--- !u!114 &1205890727458936131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826275618615662661}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: becec1a82ad325a4c9f6d145b16c3212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToMove: {fileID: 0}
+  uiTarget: {fileID: 0}
+  nearPlaneOffset: 5
+  movementSpeed: 50
