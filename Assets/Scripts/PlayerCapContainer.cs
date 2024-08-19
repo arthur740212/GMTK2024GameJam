@@ -71,8 +71,8 @@ public class PlayerCapContainer : MonoBehaviour
 
     public List<GameObject> capModels;
     private int WornCapCount = 0;
-    public float spacing = 0.6f;
-    public float playerHeadPosY = 1.5f;
+    public float spacing = 0.2f;
+    public float playerHeadPosY = 1.8f;
 
     public void WearCap(int TypeAsInt) 
     {
