@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stat_Cooldown: {fileID: 11400000, guid: 42ef58c394d3366489853486cc6bf166, type: 2}
   FireballPrefab: {fileID: 3007010256405525432, guid: 88703cfd0e1c9c94281ff6f916e267b7, type: 3}
+  playerStats: {fileID: 0}
   remaining_cooldown: 0.1
 --- !u!1 &4239526803026166437
 GameObject:
@@ -168,6 +169,7 @@ GameObject:
   - component: {fileID: 8930639834658341829}
   - component: {fileID: 7924154702577326950}
   - component: {fileID: -2099468591281039669}
+  - component: {fileID: 7488349628614882635}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -355,4 +357,19 @@ MonoBehaviour:
   ManaRegen: 3
   Health: 100
   Mana: 100
+  Shield: {fileID: 7488349628614882635}
   Fibo: 
+--- !u!114 &7488349628614882635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4239526803026166437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ef1415791fdf142a5a62c45e07fce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: -2099468591281039669}
+  shieldOn: 0
