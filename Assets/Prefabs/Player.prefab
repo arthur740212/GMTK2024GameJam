@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stat_Cooldown: {fileID: 11400000, guid: 42ef58c394d3366489853486cc6bf166, type: 2}
-  FireballPrefab: {fileID: 3007010256405525432, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+  FireballPrefab: {fileID: 3007010256405525432, guid: 88703cfd0e1c9c94281ff6f916e267b7, type: 3}
   remaining_cooldown: 0.1
 --- !u!1 &4239526803026166437
 GameObject:
@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 6907224918507140905}
   - component: {fileID: 8930639834658341829}
   - component: {fileID: 7924154702577326950}
+  - component: {fileID: -2099468591281039669}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -276,11 +277,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b606281f8c9356429c3f71faa971f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 0}
+  playerStats: {fileID: -2099468591281039669}
   TallyPrefab: {fileID: 6162628233614298391, guid: c066029765ac34f47a6d8513ebae8f51, type: 3}
   capacity: 20
   collectedCaps: []
-  tallyPerCapType: []
+  tallyPerCapType:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!143 &8930639834658341829
 CharacterController:
   m_ObjectHideFlags: 0
@@ -320,3 +325,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &-2099468591281039669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4239526803026166437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b206cd1e495a51743b3a30e4c7fb5d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Red_Stat: {fileID: 11400000, guid: ce3d9ada55bfb20438264f55b3037c42, type: 2}
+  Green_Stat: {fileID: 11400000, guid: 42ef58c394d3366489853486cc6bf166, type: 2}
+  Yellow_Stat: {fileID: 11400000, guid: 60be779fd9bd6de498c9f25a264055f7, type: 2}
+  Blue_Stat: {fileID: 11400000, guid: 7b34b4c1a63aaf64293cdb9ea6381556, type: 2}
+  Red_level: 1
+  Green_level: 1
+  Yellow_level: 1
+  Blue_level: 1
+  Damage: 1
+  MaxHealth: 10000
+  Armor: 1
+  MaxMana: 10000
+  Projectiles: 0
+  HealthRegen: 1
+  ShieldRegen: 2
+  ManaRegen: 3
+  Health: 100
+  Mana: 100
+  Fibo: 

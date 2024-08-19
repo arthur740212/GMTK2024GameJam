@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stat_Cooldown: {fileID: 11400000, guid: 42ef58c394d3366489853486cc6bf166, type: 2}
-  FireballPrefab: {fileID: 8187554877478771114, guid: 7174d5b020a36694291e0e94b7a0751f, type: 3}
+  FireballPrefab: {fileID: 3007010256405525432, guid: bd4c1d6c1fd171d4f9e17b8850ee234f, type: 3}
   remaining_cooldown: 0.1
