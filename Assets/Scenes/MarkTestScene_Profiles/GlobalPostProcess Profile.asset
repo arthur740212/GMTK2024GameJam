@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-644770883081068979
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6050e2d5de785ce4d931e4dbdbf2d755, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  spectralLut:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  intensity:
+    overrideState: 1
+    value: 0.045
+  fastMode:
+    overrideState: 1
+    value: 1
 --- !u!114 &-100274335053216682
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -53,7 +79,7 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 37
+    value: 52
   tint:
     overrideState: 1
     value: 0
@@ -65,7 +91,7 @@ MonoBehaviour:
     value: -8
   saturation:
     overrideState: 1
-    value: 2
+    value: 5
   brightness:
     overrideState: 0
     value: 0
@@ -74,10 +100,10 @@ MonoBehaviour:
     value: 0
   contrast:
     overrideState: 1
-    value: 1
+    value: 8
   mixerRedOutRedIn:
     overrideState: 1
-    value: 100
+    value: 97
   mixerRedOutGreenIn:
     overrideState: 1
     value: 0
@@ -1326,6 +1352,60 @@ MonoBehaviour:
   settings:
   - {fileID: 8606776468412845838}
   - {fileID: -100274335053216682}
+  - {fileID: 1177420886478036242}
+  - {fileID: -644770883081068979}
+--- !u!114 &1177420886478036242
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
+  m_Name: AmbientOcclusion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  mode:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 0.38
+  color:
+    overrideState: 1
+    value: {r: 1, g: 0, b: 0.1903224, a: 1}
+  ambientOnly:
+    overrideState: 0
+    value: 1
+  noiseFilterTolerance:
+    overrideState: 0
+    value: 0
+  blurTolerance:
+    overrideState: 0
+    value: -4.6
+  upsampleTolerance:
+    overrideState: 0
+    value: -12
+  thicknessModifier:
+    overrideState: 0
+    value: 1
+  zBias:
+    overrideState: 0
+    value: 0.0001
+  directLightingStrength:
+    overrideState: 0
+    value: 0
+  radius:
+    overrideState: 0
+    value: 0.25
+  quality:
+    overrideState: 0
+    value: 2
 --- !u!114 &8606776468412845838
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1344,10 +1424,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 6.3
+    value: 3.16
   threshold:
     overrideState: 1
-    value: 1
+    value: 0.85
   softKnee:
     overrideState: 0
     value: 0.5

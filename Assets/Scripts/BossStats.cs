@@ -15,15 +15,23 @@ public class BossStats : MonoBehaviour
 
     public GameObject BossAttackPrefab;
 
+    public HitParticle BossHitParticle;
+
+    private void Awake()
+    {
+        
+    }
     public void DealDamage(int damage) 
     {
         BossHealth -= damage;
     }
-    private void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Fireball")
+        if (other.CompareTag("Fireball"))
         {
-            collision.gameObject.SetActive(false);
+            other.gameObject.SetActive(false);
+            BossHitParticle.transform.position = other.gameObject.transform.position;
+            BossHitParticle.PlayAllParticleSystems();
             DealDamage(2);
         }
     }
