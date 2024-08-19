@@ -38,6 +38,7 @@ public class PlayerStats : MonoBehaviour
 
     public ParticleSystem AddHealthParticle;
     public ParticleSystem AddManaParticle;
+    public ParticleSystem AddShieldParticle;
 
     public List<int> Fibo = new List<int>();
 
@@ -78,6 +79,10 @@ public class PlayerStats : MonoBehaviour
 
     private void ApplyShield()
     {
+        if (!AddShieldParticle.isPlaying)
+        {
+            AddShieldParticle.Play();
+        }
         Debug.Log("New Shilewed");
         Shield.shieldOn = true;
     }
