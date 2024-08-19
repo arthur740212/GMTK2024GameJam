@@ -16,5 +16,11 @@ public class Cap : MonoBehaviour
         return this;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        other.gameObject.GetComponent<PlayerCapContainer>().AddCap(this);
+        this.GetComponent<Collider>().enabled = false;
+    }
+
     public CapType Type;
 }
