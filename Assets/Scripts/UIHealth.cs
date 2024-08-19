@@ -18,11 +18,19 @@ public class UIHealth : MonoBehaviour
     public Text playerManaText;
     public Text bossHealthText;
 
+    public float currentHealth = 1;
+    public float currentMana = 1;
+    public float currentBossHealth = 1;
+
     private void Update()
     {
-        playerHealth.sizeDelta = new Vector2(1000.0f * playerStats.Health / playerStats.MaxHealth, 50.0f);
-        playerMana.sizeDelta = new Vector2(1000.0f * playerStats.Mana / playerStats.MaxMana, 50.0f);
-        bossHealth.sizeDelta = new Vector2(1000.0f * bossStats.BossHealth / bossStats.BossMaxHealth, 50.0f);
+        currentHealth = 0.9f * currentHealth + 0.1f * playerStats.Health;
+        currentMana = 0.9f * currentMana + 0.1f * playerStats.Mana;
+        currentBossHealth = 0.9f * currentBossHealth + 0.1f * bossStats.BossHealth;
+
+        playerHealth.sizeDelta = new Vector2(1000.0f * currentHealth / playerStats.MaxHealth, 50.0f);
+        playerMana.sizeDelta = new Vector2(1000.0f * currentMana / playerStats.MaxMana, 50.0f);
+        bossHealth.sizeDelta = new Vector2(1000.0f * currentBossHealth / bossStats.BossMaxHealth, 50.0f);
 
         playerHealthText.text = $"{playerStats.Health} / {playerStats.MaxHealth}";
         playerManaText.text = $"{playerStats.Mana} / {playerStats.MaxMana}";
