@@ -9,6 +9,8 @@ public class BossAITimeLineBase : MonoBehaviour
 
     [SerializeField]
     private GameObject halfBladePrefab;
+    [SerializeField]
+    private GameObject AOEPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -39,4 +41,10 @@ public class BossAITimeLineBase : MonoBehaviour
 
         Instantiate(halfBladePrefab, halfbladeCenter,transform.rotation);
     }
+
+    public void AOE()
+    {
+        Instantiate(AOEPrefab, Vector3.zero, transform.rotation);
+    }
+
 }
