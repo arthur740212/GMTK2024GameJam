@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13048,14 +13047,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 885079391547640388, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
-      propertyPath: playerStats
-      value: 
-      objectReference: {fileID: 1013040654}
-    - target: {fileID: 885079391547640388, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
-      propertyPath: FireballPrefab
-      value: 
-      objectReference: {fileID: 7844156865143477809, guid: bd4c1d6c1fd171d4f9e17b8850ee234f, type: 3}
     - target: {fileID: 1320392635814717202, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -14356,6 +14347,17 @@ PrefabInstance:
       addedObject: {fileID: 1771898594}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8377062b4a6b81048a60a3e85948ed05, type: 3}
+--- !u!114 &2214892919725311052 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 620590875619712222, guid: 8377062b4a6b81048a60a3e85948ed05, type: 3}
+  m_PrefabInstance: {fileID: 2214892919725311051}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8477f21df5c669047be34da7c3a1f73e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8294016626619696333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14381,6 +14383,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1602029878723598840, guid: c517409892658b14c88dc1d2713bf839, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551827821769866282, guid: c517409892658b14c88dc1d2713bf839, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551827821769866282, guid: c517409892658b14c88dc1d2713bf839, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551827821769866282, guid: c517409892658b14c88dc1d2713bf839, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551827821769866282, guid: c517409892658b14c88dc1d2713bf839, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -14488,6 +14506,30 @@ PrefabInstance:
       propertyPath: pcc
       value: 
       objectReference: {fileID: 1013040653}
+    - target: {fileID: 4601040858673480606, guid: c517409892658b14c88dc1d2713bf839, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601040858673480606, guid: c517409892658b14c88dc1d2713bf839, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601040858673480606, guid: c517409892658b14c88dc1d2713bf839, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4601040858673480606, guid: c517409892658b14c88dc1d2713bf839, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133741209526077505, guid: c517409892658b14c88dc1d2713bf839, type: 3}
+      propertyPath: bossStats
+      value: 
+      objectReference: {fileID: 2214892919725311052}
+    - target: {fileID: 5133741209526077505, guid: c517409892658b14c88dc1d2713bf839, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 1013040654}
     - target: {fileID: 5629141582237427534, guid: c517409892658b14c88dc1d2713bf839, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
