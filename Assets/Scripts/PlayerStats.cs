@@ -123,13 +123,28 @@ public class PlayerStats : MonoBehaviour
                 Damage += Red_level;
                 break;
             case CapType.Green:
-                MaxHealth += Fibo[Green_level];
+                if (Green_level < 40)
+                {
+                    MaxHealth += Fibo[Green_level];
+                }
+                else 
+                {
+                    MaxHealth = int.MaxValue;
+                }
                 break;
             case CapType.Yellow:
                 Armor += Yellow_level * 2;
                 break;
             case CapType.Blue:
-                MaxMana += Fibo[Blue_level];
+                if (Blue_level < 40)
+                {
+                    MaxMana += Fibo[Blue_level];
+
+                }
+                else
+                {
+                    MaxMana = int.MaxValue;
+                }
                 break;
         }
     }
@@ -140,18 +155,19 @@ public class PlayerStats : MonoBehaviour
         {
             case CapType.Red:
                 Red_level++;
+                AttackRegen = Red_Stat.Evaluate(Red_level);
                 break;
             case CapType.Green:
                 Green_level++;
-                HealthRegen = Green_Stat.Value;
+                HealthRegen = Green_Stat.Evaluate(Green_level);
                 break;
             case CapType.Yellow:
                 Yellow_level++;
-                ShieldRegen = Yellow_Stat.Value;
+                ShieldRegen = Yellow_Stat.Evaluate(Yellow_level);
                 break;
             case CapType.Blue:
                 Blue_level++;
-                ManaRegen = Blue_Stat.Value;
+                ManaRegen = Blue_Stat.Evaluate(Blue_level);
                 break;
         }
     }
