@@ -3,7 +3,8 @@ using UnityEngine;
 public class BossStats : MonoBehaviour
 {
     [SerializeField]
-    private int BossHealth = 10000000;
+    public int BossHealth = 50;
+    public int BossMaxHealth = 10000000;
 
     [SerializeField]
     private int BossPower = 1;
@@ -19,7 +20,10 @@ public class BossStats : MonoBehaviour
 
     private void Awake()
     {
-        
+        if (BossHealth > BossMaxHealth)
+        {
+            BossHealth = BossMaxHealth;
+        }
     }
     public void DealDamage(int damage) 
     {
