@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stat_Cooldown: {fileID: 11400000, guid: 42ef58c394d3366489853486cc6bf166, type: 2}
-  FireballPrefab: {fileID: 3007010256405525432, guid: 88703cfd0e1c9c94281ff6f916e267b7, type: 3}
-  playerStats: {fileID: 0}
+  FireballPrefab: {fileID: -6386967100474926293, guid: 27545c03fdf4ff14e9d441d3a2964831, type: 3}
+  playerStats: {fileID: -2099468591281039669}
   remaining_cooldown: 0.1
 --- !u!1 &4239526803026166437
 GameObject:
