@@ -4842,9 +4842,10 @@ GameObject:
   - component: {fileID: 8073185032814134921}
   - component: {fileID: 2503845127953723025}
   - component: {fileID: 7844156865143477809}
+  - component: {fileID: 5087516038855293690}
   m_Layer: 0
   m_Name: Fireball 1
-  m_TagString: Untagged
+  m_TagString: Fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9688,9 +9689,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2149026588806715321, guid: 8377062b4a6b81048a60a3e85948ed05, type: 3}
-  Stat_Damage: {fileID: 11400000, guid: ce3d9ada55bfb20438264f55b3037c42, type: 2}
+  damage: 2
   duration: 3
   speed: 2.5
+--- !u!135 &5087516038855293690
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3007010256405525432}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.9243037
+  m_Center: {x: -0.15079862, y: 0, z: 0}
 --- !u!1 &3248233847703253189
 GameObject:
   m_ObjectHideFlags: 0

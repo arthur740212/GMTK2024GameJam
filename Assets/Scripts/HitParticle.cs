@@ -13,13 +13,13 @@ public class HitParticle : MonoBehaviour
 
     void Update()
     {
-        if (AllSystemsStopped())
-        {
-            Destroy(this.gameObject);
-        }
+        //if (AllSystemsStopped())
+        //{
+        //    Destroy(this.gameObject);
+        //}
     }
 
-    void PlayAllParticleSystems()
+    public void PlayAllParticleSystems()
     {
         foreach (var p in particleSystems)
         {
@@ -27,15 +27,15 @@ public class HitParticle : MonoBehaviour
         }
     }
 
-    bool AllSystemsStopped()
-    {
-        foreach (var p in particleSystems)
-        {
-            if (p.isPlaying)
-            {
-                return false;
-            }    
-        }
-        return true;
-    }
+    //bool AllSystemsStopped()
+    //{
+    //    foreach (var p in particleSystems)
+    //    {
+    //        if (p.isPlaying)
+    //        {
+    //            return false;
+    //        }    
+    //    }
+    //    return true;
+    //}
 }
