@@ -4,17 +4,18 @@ using UnityEngine.UIElements;
 
 public class Fireball : MonoBehaviour
 {
-    public GameObject target;
-    public int damage = 2;
-    public float sizeRate = 1.0f;
 
+    public Stat sizeStats;
+
+    public GameObject target;
+    public int damage = 1;
 
     public float duration = 10.0f;
-    public float speed = 5.0f;
+    public float speed = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
-        float scale = sizeRate;
+        float scale = sizeStats.Evaluate(damage);
         transform.localScale = new Vector3(scale, scale, scale);
         Destroy(gameObject, duration);
     }

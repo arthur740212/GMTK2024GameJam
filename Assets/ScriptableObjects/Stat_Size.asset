@@ -10,39 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e08492e4fd3c7d9438883a0a3cae9e9a, type: 3}
-  m_Name: Stat_Cooldown
+  m_Name: Stat_Size
   m_EditorClassIdentifier: 
   curve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 2
-      inSlope: -0.17650943
-      outSlope: -0.17650943
-      tangentMode: 34
+      value: 1
+      inSlope: 0.07149812
+      outSlope: 0.07149812
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0.5349292
-      outWeight: 0.33333334
+      outWeight: 0.17087309
     - serializedVersion: 3
-      time: 6.820205
-      value: 0.7961696
-      inSlope: -0.099592604
-      outSlope: -0.099592604
+      time: 185.66872
+      value: 7.577859
+      inSlope: 0.01676382
+      outSlope: 0.01676382
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.051995765
+      inWeight: 0.43838772
+      outWeight: 0.07091095
     - serializedVersion: 3
-      time: 25.027832
-      value: 0.01
-      inSlope: -0.01646661
-      outSlope: -0.01646661
+      time: 500
+      value: 10
+      inSlope: 0.004228442
+      outSlope: 0.004228442
       tangentMode: 0
       weightedMode: 3
-      inWeight: 0.29451302
+      inWeight: 0.32597607
       outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  level: 1

@@ -9688,9 +9688,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b88675ec6b67e845b9cb2a7b93b8669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sizeStats: {fileID: 11400000, guid: 7ef8c188835030f458f54adc0228dffe, type: 2}
   target: {fileID: 2149026588806715321, guid: 8377062b4a6b81048a60a3e85948ed05, type: 3}
   damage: 2
-  sizeRate: 0.1
   duration: 3
   speed: 2.5
 --- !u!135 &-4261991291322720546
