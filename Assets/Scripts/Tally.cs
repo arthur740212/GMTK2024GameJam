@@ -23,7 +23,7 @@ public class Tally : MonoBehaviour
     {
         //pcc = gameObject.GetComponentInParent<PlayerCapContainer>();
         pcc.OnCollectedCapsChange += UpdateTallyVisual;
-        rectTransform = GetComponent<RectTransform>();  
+        //rectTransform = GetComponent<RectTransform>();  
 
         //MaterialPropertyBlock MPB = new();
         //MPB.SetColor("_Color", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
@@ -36,7 +36,7 @@ public class Tally : MonoBehaviour
 
     private void UpdateTallyVisual()
     {
-        targetSize = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate;
+        //targetSize = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate;
         sliderTargetValue = (float)pcc.TallyPerCapType[TypeAsInt].Count / Threshold;
 
 
@@ -52,22 +52,21 @@ public class Tally : MonoBehaviour
 
     private void Update()
     {
-        currentSize = rectTransform.sizeDelta.y;
-        targetSize = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate;
-        if (Mathf.Abs(currentSize - targetSize) > 0.001f)
+        //currentSize = rectTransform.sizeDelta.y;
+        //targetSize = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate;
+        //if (Mathf.Abs(currentSize - targetSize) > 0.001f)
+        //{
+        //    currentSize = 0.1f * targetSize + 0.9f * currentSize;
+        //    rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, currentSize);
+        //}
+
+
+        sliderCurrentValue = slider.value;
+        if (Mathf.Abs(sliderCurrentValue - sliderTargetValue) > 0.001f)
         {
-            currentSize = 0.1f * targetSize + 0.9f * currentSize;
-            rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, currentSize);
+            slider.value = Mathf.Lerp(sliderCurrentValue, sliderTargetValue, 0.1f);
         }
 
-        if (slider != null) 
-        {
-            sliderCurrentValue = slider.value;
-            if (Mathf.Abs(sliderCurrentValue - sliderTargetValue) > 0.001f) 
-            {
-                slider.value = Mathf.Lerp(sliderCurrentValue, sliderTargetValue, 0.1f);
-            }
-        }
     }
     public int Count;
     public int Threshold = 3;
