@@ -5,36 +5,73 @@ using UnityEngine;
 
 public class HatGenerator : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] HatPrefab;
+
+    public struct HatPos
+    {
+        public Vector3 pos;
+        public bool isOccupied;
+    };
+
+    public HatPos[] hatPosArray = new HatPos[16];
+
+    private float timepass = 0.0f;
 
     [SerializeField]
-    private GameObject[] AreaBlockGameObjects;
+    private GameObject[] hatPrefab;
+
+    [SerializeField]
+    private GameObject arena;
+
+    [SerializeField]
+    private GameObject[] areaBlockGameObjects;
 
     private int posIndex = 0;
     private int hatIndex = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        for(int i = 0;i < 16 ;i++)
+        {
+            hatPosArray[i].pos = areaBlockGameObjects[posIndex].transform.position;
+            hatPosArray[i].isOccupied = false;
+        }
+
+        GenerateHatRandomly(0,4);
+        GenerateHatRandomly(4,8);
+        GenerateHatRandomly(8,12);
+        GenerateHatRandomly(12,16);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        timepass += 0.01f;
+        if(timepass >= 5.0f)
         {
-            GenerateHatRandomly();
+            GenerateHatRandomly(0,16);
+            timepass = 0.0f;
         }
     }
 
-    private void GenerateHatRandomly()
+    private void GenerateHatRandomly(int minValue, int maxValue)
     {
-        posIndex = Random.Range(0, 16);
+        posIndex = Random.Range(minValue, maxValue);
         hatIndex = Random.Range(0, 4);
-        var Pos = AreaBlockGameObjects[posIndex].transform.position;
-        Pos.y = 0.5f;
-        var hat = Instantiate(HatPrefab[hatIndex], Pos, transform.rotation); ;
+        while(hatPosArray[posIndex].isOccupied == true)
+        {
+            posIndex++;
+        }
+        var Pos = hatPosArray[posIndex].pos;
+        hatPosArray[posIndex].isOccupied = true;
+
+        Pos.y = arena.transform.position.y + 0.2f;
+        var hat = Instantiate(hatPrefab[hatIndex], Pos, transform.rotation);
+    }
+
+    IEnumerator DelayCreateHatRandomly(float delaytime)
+    {
+        yield return new WaitForSeconds(delaytime);
+        GenerateHatRandomly(0,16);
     }
 
 }
