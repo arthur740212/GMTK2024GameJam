@@ -33,7 +33,8 @@ public class PlayerStats : MonoBehaviour
 
     public int Health = 100;
     public int Mana = 100;
-    public Shield Shield;
+
+    private bool shieldOn = false;
 
     private int AddHealthAmount = 10;
     private int AddManaAmount = 10;
@@ -85,8 +86,8 @@ public class PlayerStats : MonoBehaviour
         {
             AddShieldParticle.Play();
         }
-        Debug.Log("New Shileded");
-        Shield.shieldOn = true;
+        Debug.Log("New Shield");
+        shieldOn = true;
     }
     private void AddMana()
     {
@@ -102,18 +103,29 @@ public class PlayerStats : MonoBehaviour
     public Color finalDeathImageColor;
     public void LoseHealth(int damage)
     {
-        Health -= damage;
+        if(shieldOn)
+        {
+            shieldOn = false;
+            AddShieldParticle.Stop();
+            AddShieldParticle.Clear();
+            Debug.Log("ShieldBroke");
+        }
+        else
+        {
+            Health -= damage;
+        }
+
         if (Health <= 0) 
         {
-            //ShowDeathImage();
-            SceneManager.LoadScene("EndScene");
+            ShowDeathImage();
+            //SceneManager.LoadScene("EndScene");
         }
     }
     
     public async void ShowDeathImage()
     {
         float time = 0.0f;
-        while (time < 3.0f)
+        while (time < 1.0f)
         {
             time += Time.deltaTime;
             deathImage.color = Color.Lerp(deathImage.color, finalDeathImageColor, time);

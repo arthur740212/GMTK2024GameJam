@@ -329,12 +329,12 @@ MonoBehaviour:
   Yellow_level: 1
   Blue_level: 1
   Damage: 1
-  MaxHealth: 10000
+  MaxHealth: 1000
   Armor: 1
   MaxMana: 10000
   AttackRegen: 2
   HealthRegen: 5
-  ShieldRegen: 2
+  ShieldRegen: 20
   ManaRegen: 5
   AttackCD: 1
   Health: 1000
@@ -345,7 +345,7 @@ MonoBehaviour:
   AddShieldParticle: {fileID: 1035273571752233477}
   Fibo: 
   deathImage: {fileID: 0}
-  finalDeathImageColor: {r: 0, g: 0, b: 0, a: 0}
+  finalDeathImageColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &7488349628614882635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,7 +505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2615030494308228897, guid: 030c5ce7ccee89c4e8e7b325c47f0af1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

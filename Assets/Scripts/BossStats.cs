@@ -44,7 +44,7 @@ public class BossStats : MonoBehaviour
     public async void ShowWinImage()
     {
         float time = 0.0f;
-        while (time < 3.0f)
+        while (time < 1.0f)
         {
             time += Time.deltaTime;
             winImage.color = Color.Lerp(winImage.color, finalWinImageColor, time);

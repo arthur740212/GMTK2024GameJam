@@ -159,7 +159,7 @@ MonoBehaviour:
   BossHitParticle: {fileID: 5170398880696041655}
   hitSFX: {fileID: 8226241637653314620}
   winImage: {fileID: 0}
-  finalWinImageColor: {r: 0, g: 0, b: 0, a: 0}
+  finalWinImageColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!82 &8226241637653314620
 AudioSource:
   m_ObjectHideFlags: 0
