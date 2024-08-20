@@ -38,7 +38,7 @@ public class BossStats : MonoBehaviour
             BossHitParticle.transform.position = other.gameObject.transform.position;
             BossHitParticle.PlayAllParticleSystems();
             DealDamage(other.GetComponent<Fireball>().damage);
-            hitSFX.Play();
+            //hitSFX.Play();
         }
     }
     private void Update()

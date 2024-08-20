@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     public float speed = 10.0f;
     // Start is called before the first frame update
+    private Vector3 velocity;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -17,6 +18,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //gravity
+        velocity.y += Physics.gravity.y * Time.deltaTime;
+        controller.Move(velocity);
+        
         Movement();
     }
 

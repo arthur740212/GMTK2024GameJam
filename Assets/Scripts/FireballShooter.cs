@@ -13,7 +13,7 @@ public class FireballShooter : MonoBehaviour
     {
         var obj = Instantiate(FireballPrefab, transform.position, transform.rotation);
         obj.damage = playerStats.Damage;
-        shootSFX.Play();
+        //shootSFX.Play();
     }
 
     private void Start()
