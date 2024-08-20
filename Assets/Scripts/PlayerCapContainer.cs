@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCapContainer : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerCapContainer : MonoBehaviour
 
     public Tally TallyPrefab;
 
+    public Image Cloth;
+
     public void AddCap(Cap pickedUpCap)
     {
         if (collectedCaps.Count < capacity)
@@ -24,10 +27,6 @@ public class PlayerCapContainer : MonoBehaviour
             CollectedCapsUpdate();
             CheckOverflowedSets();
 
-            if (collectedCaps.Count == capacity)
-            {
-                DecideLevelUp();
-            }
             //CheckCompletedSets();
         }
     }
@@ -41,7 +40,7 @@ public class PlayerCapContainer : MonoBehaviour
         }
     }
 
-
+    private Color updatedColor;
     public async void DecideLevelUp()
     {
         int highestCount = 0;
@@ -65,6 +64,23 @@ public class PlayerCapContainer : MonoBehaviour
         highestTypes.Clear();
         playerStats.LevelUp(upgradeTypeTally.Type);
 
+        switch (upgradeTypeTally.Type)
+        {
+            case CapType.Red:
+                updatedColor = Color.red;
+                break;
+            case CapType.Green:
+                updatedColor = Color.green;
+                break;
+            case CapType.Yellow:
+                updatedColor = Color.yellow;
+                break;
+            case CapType.Blue:
+                updatedColor = Color.blue;
+                break;
+        }
+
+        ChangeColor();
         await Task.Delay(400);
         WearCap(upgradeTypeTally.TypeAsInt);
 
@@ -78,7 +94,7 @@ public class PlayerCapContainer : MonoBehaviour
     public float spacing = 0.2f;
     public float playerHeadPosY = 1.8f;
 
-    public void WearCap(int TypeAsInt) 
+    public void WearCap(int TypeAsInt)
     {
         Vector3 pos = Vector3.zero;
         pos.y = playerHeadPosY + WornCapCount * spacing;
@@ -96,20 +112,56 @@ public class PlayerCapContainer : MonoBehaviour
         }
 
         CollectedCapsUpdate();
+        ResetColor();
+    }
 
+    public Color defaultClothColor;
+    public Color dissolveClothColor;
+    private bool changeInProcess = false;
+    public async void ResetColor()
+    {
+        float t = 0.0f;
+        while (changeInProcess) 
+        {
+            await Task.Delay(1);
+        }
+        while (t < 1.0f)
+        {
+            t += Time.deltaTime;
+            Cloth.color = Color.Lerp(Cloth.color, defaultClothColor, t);
+            await Task.Delay(1);
+        }
+    }
+
+    public async void ChangeColor()
+    {
+        changeInProcess = true;
+        float t = 0.0f;
+        while (t < 1.0f)
+        {
+            t += Time.deltaTime;
+            Cloth.color = Color.Lerp(Cloth.color, updatedColor, t);
+            await Task.Delay(1);
+        }
+        changeInProcess = false;
     }
 
     public async void CheckOverflowedSets()
     {
-
         foreach (var tally in tallyPerCapType)
         {
             if (tally.PassedThreshold())
             {
+                updatedColor = dissolveClothColor;
+                ChangeColor();
                 await Task.Delay(400);
                 FlushAllCaps();
                 return;
             }
+        }
+        if (collectedCaps.Count == capacity)
+        {
+            DecideLevelUp();
         }
     }
 

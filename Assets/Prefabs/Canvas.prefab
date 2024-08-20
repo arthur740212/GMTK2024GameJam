@@ -1541,8 +1541,10 @@ GameObject:
   - component: {fileID: 6876768718428845377}
   - component: {fileID: 158759216687210825}
   - component: {fileID: 5133741209526077505}
+  - component: {fileID: 1372904004126229257}
+  - component: {fileID: 714940757042705889}
   m_Layer: 5
-  m_Name: InGameUI
+  m_Name: Cloth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1620,6 +1622,47 @@ MonoBehaviour:
   playerHealthText: {fileID: 7147739666987320443}
   playerManaText: {fileID: 3454980610532425640}
   bossHealthText: {fileID: 2447466756269663079}
+  currentHealth: 1
+  currentMana: 1
+  currentBossHealth: 1
+--- !u!222 &1372904004126229257
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8458299952334962442}
+  m_CullTransparentMesh: 1
+--- !u!114 &714940757042705889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8458299952334962442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.745283, g: 0.4000492, b: 0.18632075, a: 0.56078434}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &8560400788645883510
 GameObject:
   m_ObjectHideFlags: 0
