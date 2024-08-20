@@ -32,7 +32,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 540099330980019097}
+  - {fileID: 4299217145785783904}
+  - {fileID: 6494196483549806370}
+  - {fileID: 166681626069379432}
+  - {fileID: 2568186220898558689}
+  - {fileID: 348362611005879570}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3279832843417192664
@@ -76,9 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43d2fe5e0c9dfd4f81f2784fc9f92bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boss: {fileID: 0}
-  halfBladeAttack: {fileID: 0}
---- !u!1001 &683314386275736431
+--- !u!1001 &1470223693175058102
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -86,70 +88,425 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5741345170961935617}
     m_Modifications:
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Color.g
+      value: 0.20784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Color.r
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 18.93
       objectReference: {fileID: 0}
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.7071068
       objectReference: {fileID: 0}
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3007010256405525432, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    - target: {fileID: 5642766282230003982, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
       propertyPath: m_Name
-      value: BossAttack
+      value: CFXR2 Souls Escape (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -4717675884819856981, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
---- !u!4 &540099330980019097 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+--- !u!4 &6494196483549806370 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1010301285152088310, guid: 184c567c2f8a87744b3399a7bbaf07a6, type: 3}
-  m_PrefabInstance: {fileID: 683314386275736431}
+  m_CorrespondingSourceObject: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+  m_PrefabInstance: {fileID: 1470223693175058102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5373616865204774022
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5741345170961935617}
+    m_Modifications:
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Color.g
+      value: 0.20784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Color.r
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642766282230003982, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Name
+      value: CFXR2 Souls Escape
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+--- !u!4 &348362611005879570 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+  m_PrefabInstance: {fileID: 5373616865204774022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5482958745169262844
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5741345170961935617}
+    m_Modifications:
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Color.g
+      value: 0.20784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Color.r
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642766282230003982, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Name
+      value: CFXR2 Souls Escape (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+--- !u!4 &166681626069379432 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+  m_PrefabInstance: {fileID: 5482958745169262844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7918254077021680501
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5741345170961935617}
+    m_Modifications:
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Color.g
+      value: 0.20784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Color.r
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Intensity
+      value: 1.5477765
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642766282230003982, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Name
+      value: CFXR2 Souls Escape (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+--- !u!4 &2568186220898558689 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+  m_PrefabInstance: {fileID: 7918254077021680501}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8497921775827994612
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5741345170961935617}
+    m_Modifications:
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Color.g
+      value: 0.20784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Color.r
+      value: 0.74509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 2890922287441858210, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642766282230003982, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+      propertyPath: m_Name
+      value: CFXR2 Souls Escape (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+--- !u!4 &4299217145785783904 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5640562698000028052, guid: 50e41b776ec325647a0bfb6992a627ee, type: 3}
+  m_PrefabInstance: {fileID: 8497921775827994612}
   m_PrefabAsset: {fileID: 0}

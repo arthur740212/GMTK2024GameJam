@@ -62,7 +62,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0
+      - time: 0.5018248
         functionName: AOE
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: 27a2ca0931151c04987cf8695d74bb81, type: 3}

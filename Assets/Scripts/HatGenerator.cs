@@ -32,7 +32,7 @@ public class HatGenerator : MonoBehaviour
     {
         for(int i = 0;i < 16 ;i++)
         {
-            hatPosArray[i].pos = areaBlockGameObjects[posIndex].transform.position;
+            hatPosArray[i].pos = areaBlockGameObjects[i].transform.position;
             hatPosArray[i].isOccupied = false;
         }
 
@@ -45,7 +45,7 @@ public class HatGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timepass += 0.01f;
+        timepass += Time.deltaTime;
         if(timepass >= 5.0f)
         {
             GenerateHatRandomly(0,16);
@@ -57,15 +57,23 @@ public class HatGenerator : MonoBehaviour
     {
         posIndex = Random.Range(minValue, maxValue);
         hatIndex = Random.Range(0, 4);
-        while(hatPosArray[posIndex].isOccupied == true)
-        {
-            posIndex++;
-        }
+        
+        //while(hatPosArray[posIndex].isOccupied == true)
+        //{
+        //    Debug.Log("the pos already obtained a hat");
+        //    posIndex++;
+        //    if(posIndex > 15)
+        //    {
+        //        posIndex = 0;
+        //    }
+        //}
         var Pos = hatPosArray[posIndex].pos;
         hatPosArray[posIndex].isOccupied = true;
 
-        Pos.y = arena.transform.position.y + 0.2f;
-        var hat = Instantiate(hatPrefab[hatIndex], Pos, transform.rotation);
+        Pos.y = arena.transform.position.y + 0.5f;
+        GameObject hat = Instantiate(hatPrefab[hatIndex], Pos, transform.rotation);
+        Cap hatStat =  hat.GetComponent<Cap>();
+        hatStat.posIndex = posIndex;
     }
 
     IEnumerator DelayCreateHatRandomly(float delaytime)

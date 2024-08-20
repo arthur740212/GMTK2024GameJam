@@ -119,3 +119,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f4266aa099f8e4596aad356110ad0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 2149026588806715321, guid: 8377062b4a6b81048a60a3e85948ed05, type: 3}
+  halfBladeAttack: {fileID: 3477885360574326960, guid: 073ef2b55a5b4ef4d85c93909a372bb1, type: 3}

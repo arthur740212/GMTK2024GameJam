@@ -119,3 +119,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 519e4fa2d14b41d4d90a1e300d74ad00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fourBeamsAttack: {fileID: 3477885360574326960, guid: bd73ec95de8c6a34c802b771240fbf1e, type: 3}

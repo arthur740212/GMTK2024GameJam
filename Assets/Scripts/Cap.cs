@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using static HatGenerator;
 
 public enum CapType
 {
@@ -11,6 +12,20 @@ public enum CapType
 
 public class Cap : MonoBehaviour
 {
+
+    [SerializeField]
+    private GameObject arena;
+
+    private float duration = 20.0f;
+
+    public int posIndex = -1;
+
+    HatGenerator hatGenerator = null;
+
+    void Start()
+    {
+        hatGenerator = arena.GetComponent<HatGenerator>();
+    }
     public Cap Initialized(int index)
     {
         Type = (CapType)index;
@@ -28,4 +43,14 @@ public class Cap : MonoBehaviour
     public Collider capCollider;
     public Move3DObjectToUI mover;
     public CapType Type;
+
+    void Update()
+    {
+        Destroy(gameObject, duration);
+    }
+
+    void OnDestroy()
+    {
+        hatGenerator.hatPosArray[posIndex].isOccupied = false;
+    }
 }

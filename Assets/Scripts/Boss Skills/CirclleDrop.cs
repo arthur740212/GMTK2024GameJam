@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CirclleDrop : MonoBehaviour
 {
-    private float duration = 0.2f;
+    private float duration = 0.5f;
 
+    [SerializeField]
+    private GameObject circleDropAttack;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class CirclleDrop : MonoBehaviour
     void OnDestroy()
     {
         Debug.Log("Do damage");
-        //Instantiate(halfBladeAttack, Boss.transform);
+        var pos = transform.position;
+        var hitbox = Instantiate(circleDropAttack, pos, transform.rotation);
     }
 }

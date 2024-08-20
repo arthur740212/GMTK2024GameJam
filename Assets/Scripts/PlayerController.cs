@@ -19,8 +19,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //gravity
-        velocity.y += Physics.gravity.y * Time.deltaTime;
-        controller.Move(velocity);
+        if(velocity.y <= 9.8f)
+            velocity.y += Physics.gravity.y * Time.deltaTime;
+
+        controller.Move(velocity*Time.deltaTime);
         
         Movement();
     }

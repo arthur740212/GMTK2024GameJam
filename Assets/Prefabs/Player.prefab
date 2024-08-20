@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 7488349628614882635}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,10 +154,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: -2099468591281039669}
   TallyPrefab: {fileID: 6162628233614298391, guid: c066029765ac34f47a6d8513ebae8f51, type: 3}
-  capModels: []
+  capModels:
+  - {fileID: 826275618615662661, guid: 8ac3479cac2318c4a9b0aaea6fc79d51, type: 3}
+  - {fileID: 826275618615662661, guid: 3d576be6f42a5cd46a23ae62e8b80533, type: 3}
+  - {fileID: 826275618615662661, guid: 7d368b858311d5f4580b7646a73d1e87, type: 3}
+  - {fileID: 826275618615662661, guid: b9165b13e8e5f3947b53fa074f6de145, type: 3}
   spacing: 0.2
   playerHeadPosY: 1.8
-  capacity: 20
+  capacity: 3
   collectedCaps: []
   tallyPerCapType:
   - {fileID: 0}

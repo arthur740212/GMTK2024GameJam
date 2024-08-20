@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class AOE : MonoBehaviour
 {
+    private int damage = 450;
     private float duration = 3.0f;
     //do collision check
     //do dmg
     //destroy self
     // Start is called before the first frame update
+
+
     void Start()
     {
         Debug.Log("Do AOE dmg");
@@ -26,5 +29,16 @@ public class AOE : MonoBehaviour
     {
         Debug.Log("Do damage");
         //Instantiate(halfBladeAttack, Boss.transform);
+        GameObject player = GameObject.Find("Player");
+        PlayerStats playerStat = null;
+        if (player != null)
+        {
+            playerStat = player.GetComponent<PlayerStats>();
+        }
+
+        if (playerStat != null)
+        {
+            playerStat.LoseHealth(damage);
+        }
     }
 }

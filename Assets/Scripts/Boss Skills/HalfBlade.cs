@@ -6,6 +6,9 @@ public class HalfBlade : MonoBehaviour
 {
     private float duration = 3.0f;
 
+    [SerializeField]
+    private GameObject halfBladeAttack;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,8 @@ public class HalfBlade : MonoBehaviour
 
     void OnDestroy()
     {
-        Debug.Log("Do damage");
-        //Instantiate(halfBladeAttack, Boss.transform);
+        Debug.Log("Do HalfBlade damage");
+        var pos = transform.position;
+        var hitbox= Instantiate(halfBladeAttack, pos, transform.rotation);
     }
 }

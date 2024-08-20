@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 40}
-  m_LocalScale: {x: 40, y: 40, z: 40}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6042707868447908108}
@@ -156,6 +156,7 @@ MonoBehaviour:
   SecondsToBossLevelup: 14.4343
   BossAttackPrefab: {fileID: 0}
   BossHitParticle: {fileID: 5170398880696041655}
+  hitSFX: {fileID: 0}
 --- !u!1 &4474111783472158254
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +478,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arena: {fileID: 0}
   halfBladePrefab: {fileID: 3477885360574326960, guid: a49f1c24161fa9844810bb1b6ef37c5b, type: 3}
+  AOEPrefab: {fileID: 1176774640651297410, guid: 340a2eb56be8e2d4e9540a83aeb731ca, type: 3}
+  FourBeamsPrefab: {fileID: 3477885360574326960, guid: 2112530a71fa4cd4ba8715605b654540, type: 3}
+  DropPrefab: {fileID: 5577293137773405264, guid: 02bc0c28f6215fd4784d9a1086c8f8d2, type: 3}
 --- !u!4 &9183822391415090325 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7f79a83f3d1b19142a1750904e56bbb7, type: 3}

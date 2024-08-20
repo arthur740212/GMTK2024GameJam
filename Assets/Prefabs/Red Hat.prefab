@@ -120,6 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63bc05e5f74a6fa4baf66f7e6c9efe2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arena: {fileID: 3668675872572300193, guid: 3f152b0d81b98964bb852fd6697310eb, type: 3}
+  duration: 5
+  posIndex: -1
   capCollider: {fileID: 9218565497914468229}
   mover: {fileID: -2970284059198227010}
   Type: 0

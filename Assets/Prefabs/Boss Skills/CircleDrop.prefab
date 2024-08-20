@@ -120,3 +120,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03676125002ecc44880cecf75b5a6a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  circleDropAttack: {fileID: 5577293137773405264, guid: cd69175d68d21d545a6c3a58d0c2dad3, type: 3}
