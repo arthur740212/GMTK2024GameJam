@@ -160,9 +160,9 @@ MonoBehaviour:
   - {fileID: 826275618615662661, guid: 3d576be6f42a5cd46a23ae62e8b80533, type: 3}
   - {fileID: 826275618615662661, guid: 7d368b858311d5f4580b7646a73d1e87, type: 3}
   - {fileID: 826275618615662661, guid: b9165b13e8e5f3947b53fa074f6de145, type: 3}
-  spacing: 0.2
-  playerHeadPosY: 1.8
-  defaultClothColor: {r: 0, g: 0, b: 0, a: 0}
+  spacing: 0.15
+  playerHeadPosY: 1.15
+  defaultClothColor: {r: 1, g: 1, b: 1, a: 1}
   dissolveClothColor: {r: 0, g: 0, b: 0, a: 0}
   capacity: 3
   collectedCaps: []
@@ -233,7 +233,7 @@ MonoBehaviour:
   Damage: 1
   MaxHealth: 1000
   Armor: 1
-  MaxMana: 10000
+  MaxMana: 1000
   AttackRegen: 2
   HealthRegen: 5
   ShieldRegen: 2
