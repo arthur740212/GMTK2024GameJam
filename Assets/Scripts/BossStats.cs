@@ -18,6 +18,7 @@ public class BossStats : MonoBehaviour
 
     public HitParticle BossHitParticle;
 
+    public AudioSource hitSFX;
     private void Awake()
     {
         if (BossHealth > BossMaxHealth)
@@ -37,6 +38,7 @@ public class BossStats : MonoBehaviour
             BossHitParticle.transform.position = other.gameObject.transform.position;
             BossHitParticle.PlayAllParticleSystems();
             DealDamage(other.GetComponent<Fireball>().damage);
+            hitSFX.Play();
         }
     }
     private void Update()

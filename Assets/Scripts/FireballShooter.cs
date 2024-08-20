@@ -8,10 +8,12 @@ public class FireballShooter : MonoBehaviour
     public PlayerStats playerStats;
     public int ManaCost = 2;
 
+    public AudioSource shootSFX;
     public void Shoot() 
     {
         var obj = Instantiate(FireballPrefab, transform.position, transform.rotation);
         obj.damage = playerStats.Damage;
+        shootSFX.Play();
     }
 
     private void Start()
