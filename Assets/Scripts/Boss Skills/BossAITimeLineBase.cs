@@ -92,25 +92,25 @@ public class BossAITimeLineBase : MonoBehaviour
         {
             Debug.Log("Do four beams with random number : " + randNum);
             Instantiate(FourBeamsPrefab, A5, transform.rotation);
-            StartCoroutine(DelayCreateBeams(A9, 0.75f));
-            StartCoroutine(DelayCreateBeams(A1, 1.5f));
-            StartCoroutine(DelayCreateBeams(A13, 2.25f));
+            StartCoroutine(DelayCreateBeams(A9, 1.0f));
+            StartCoroutine(DelayCreateBeams(A1, 2.0f));
+            StartCoroutine(DelayCreateBeams(A13, 3.0f));
         }
         else if (randNum == 2)
         {
             Debug.Log("Do four beams with random number : " + randNum);
             Instantiate(FourBeamsPrefab, A9, transform.rotation);
-            StartCoroutine(DelayCreateBeams(A1, 0.75f));
-            StartCoroutine(DelayCreateBeams(A13, 1.5f));
-            StartCoroutine(DelayCreateBeams(A5, 2.25f));
+            StartCoroutine(DelayCreateBeams(A1, 1.0f));
+            StartCoroutine(DelayCreateBeams(A13, 2.0f));
+            StartCoroutine(DelayCreateBeams(A5, 3.0f));
         }
         else
         {
             Debug.Log("Do four beams with random number : " + randNum);
             Instantiate(FourBeamsPrefab, A13, transform.rotation);
-            StartCoroutine(DelayCreateBeams(A9,0.75f));
-            StartCoroutine(DelayCreateBeams(A5,1.5f));
-            StartCoroutine(DelayCreateBeams(A1, 2.25f));
+            StartCoroutine(DelayCreateBeams(A9,1.0f));
+            StartCoroutine(DelayCreateBeams(A5,2.0f));
+            StartCoroutine(DelayCreateBeams(A1, 3.0f));
         }
     }
 

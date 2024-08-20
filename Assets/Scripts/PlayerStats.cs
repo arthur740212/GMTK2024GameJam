@@ -103,7 +103,7 @@ public class PlayerStats : MonoBehaviour
     public void LoseHealth(int damage)
     {
         Health -= damage;
-        if (Health < 0) 
+        if (Health <= 0) 
         {
             ShowDeathImage();
         }
@@ -179,7 +179,7 @@ public class PlayerStats : MonoBehaviour
         switch (type)
         {
             case CapType.Red:
-                Red_level++;
+                Red_level*=2;
                 AttackRegen = Red_Stat.Evaluate(Red_level);
                 break;
             case CapType.Green:

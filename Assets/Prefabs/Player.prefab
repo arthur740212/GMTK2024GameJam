@@ -192,7 +192,7 @@ CharacterController:
   serializedVersion: 3
   m_Height: 2.5
   m_Radius: 0.5
-  m_SlopeLimit: 1
+  m_SlopeLimit: 75
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -231,9 +231,9 @@ MonoBehaviour:
   Yellow_level: 1
   Blue_level: 1
   Damage: 1
-  MaxHealth: 1000
+  MaxHealth: 10000
   Armor: 1
-  MaxMana: 1000
+  MaxMana: 10000
   AttackRegen: 2
   HealthRegen: 5
   ShieldRegen: 2

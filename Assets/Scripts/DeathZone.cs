@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CircleDropAttack : MonoBehaviour
+public class DeathZone : MonoBehaviour
 {
-    public int damage = 100;
-    public float duration = 0.5f;
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("do damage of circle drop");
         if (other.CompareTag("Player"))
         {
-            Debug.Log("circle drop hit player");
+            Debug.Log("drop to deathzone");
             GameObject player = other.gameObject;
             PlayerStats playerStat = null;
 
@@ -22,14 +19,8 @@ public class CircleDropAttack : MonoBehaviour
 
             if (playerStat != null)
             {
-                playerStat.LoseHealth(damage);
+                playerStat.LoseHealth(32767);
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Destroy(gameObject, duration);
     }
 }
