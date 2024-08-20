@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Move3DObjectToUI : MonoBehaviour
 {
+    public MeshRenderer meshRenderer;
     public Transform objectToMove;
     public RectTransform uiTarget;
     public float nearPlaneOffset = 5f;
@@ -37,6 +38,7 @@ public class Move3DObjectToUI : MonoBehaviour
 
         if (Vector3.Distance(objectToMove.position, uiTargetWorldPos) < 0.1f)
         {
+            meshRenderer.enabled = false;
             OnMoveComplete.Invoke();
             OnMoveComplete = null;
             enabled = false;

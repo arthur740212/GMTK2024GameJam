@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class BossStats : MonoBehaviour
 {
@@ -26,9 +29,28 @@ public class BossStats : MonoBehaviour
             BossHealth = BossMaxHealth;
         }
     }
-    public void DealDamage(int damage) 
+
+    public Image winImage;
+    public Color finalWinImageColor;
+    public void DealDamage(int damage)
     {
         BossHealth -= damage;
+        if (BossHealth <= 0)
+        {
+            ShowWinImage();
+        }
+    }
+
+    public async void ShowWinImage()
+    {
+        float time = 0.0f;
+        while (time < 3.0f)
+        {
+            time += Time.deltaTime;
+            winImage.color = Color.Lerp(winImage.color, finalWinImageColor, time);
+            await Task.Delay(10);
+        }
+        SceneManager.LoadScene("EndScene");
     }
     void OnTriggerEnter(Collider other)
     {

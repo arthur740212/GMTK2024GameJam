@@ -1,6 +1,8 @@
 using System.Collections.Generic;
-using System.Numerics;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -96,9 +98,27 @@ public class PlayerStats : MonoBehaviour
         Mana = Mathf.Min(Mana, MaxMana);
     }
 
+    public Image deathImage;
+    public Color finalDeathImageColor;
     public void LoseHealth(int damage)
     {
         Health -= damage;
+        if (Health < 0) 
+        {
+            ShowDeathImage();
+        }
+    }
+    
+    public async void ShowDeathImage()
+    {
+        float time = 0.0f;
+        while (time < 3.0f)
+        {
+            time += Time.deltaTime;
+            deathImage.color = Color.Lerp(deathImage.color, finalDeathImageColor, time);
+            await Task.Delay(10);
+        }
+        SceneManager.LoadScene("EndScene");
     }
 
     public void LoseMana(int deplete)
