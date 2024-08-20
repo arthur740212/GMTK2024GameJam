@@ -157,6 +157,8 @@ MonoBehaviour:
   BossAttackPrefab: {fileID: 0}
   BossHitParticle: {fileID: 5170398880696041655}
   hitSFX: {fileID: 0}
+  winImage: {fileID: 0}
+  finalWinImageColor: {r: 0, g: 0.64705884, b: 0, a: 0.80784315}
 --- !u!1 &4474111783472158254
 GameObject:
   m_ObjectHideFlags: 0
