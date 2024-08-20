@@ -85,7 +85,7 @@ public class PlayerStats : MonoBehaviour
         {
             AddShieldParticle.Play();
         }
-        Debug.Log("New Shilewed");
+        Debug.Log("New Shileded");
         Shield.shieldOn = true;
     }
     private void AddMana()
@@ -105,7 +105,8 @@ public class PlayerStats : MonoBehaviour
         Health -= damage;
         if (Health <= 0) 
         {
-            ShowDeathImage();
+            //ShowDeathImage();
+            SceneManager.LoadScene("EndScene");
         }
     }
     
@@ -179,19 +180,19 @@ public class PlayerStats : MonoBehaviour
         switch (type)
         {
             case CapType.Red:
-                Red_level*=2;
+                Red_level *= 2;
                 AttackRegen = Red_Stat.Evaluate(Red_level);
                 break;
             case CapType.Green:
-                Green_level++;
+                Green_level *= 2;
                 HealthRegen = Green_Stat.Evaluate(Green_level);
                 break;
             case CapType.Yellow:
-                Yellow_level++;
+                Yellow_level *= 2;
                 ShieldRegen = Yellow_Stat.Evaluate(Yellow_level);
                 break;
             case CapType.Blue:
-                Blue_level++;
+                Blue_level *= 2;
                 ManaRegen = Blue_Stat.Evaluate(Blue_level);
                 break;
         }
