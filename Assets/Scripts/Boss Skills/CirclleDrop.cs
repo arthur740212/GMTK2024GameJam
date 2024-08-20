@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CirclleDrop : MonoBehaviour
 {
-    private float duration = 0.5f;
+    private float duration = 1.0f;
 
     [SerializeField]
     private GameObject circleDropAttack;

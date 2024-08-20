@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: -2099468591281039669}
   TallyPrefab: {fileID: 6162628233614298391, guid: c066029765ac34f47a6d8513ebae8f51, type: 3}
+  Cloth: {fileID: 0}
   capModels:
   - {fileID: 826275618615662661, guid: 8ac3479cac2318c4a9b0aaea6fc79d51, type: 3}
   - {fileID: 826275618615662661, guid: 3d576be6f42a5cd46a23ae62e8b80533, type: 3}
@@ -161,6 +162,8 @@ MonoBehaviour:
   - {fileID: 826275618615662661, guid: b9165b13e8e5f3947b53fa074f6de145, type: 3}
   spacing: 0.2
   playerHeadPosY: 1.8
+  defaultClothColor: {r: 0, g: 0, b: 0, a: 0}
+  dissolveClothColor: {r: 0, g: 0, b: 0, a: 0}
   capacity: 3
   collectedCaps: []
   tallyPerCapType:
@@ -228,7 +231,7 @@ MonoBehaviour:
   Yellow_level: 1
   Blue_level: 1
   Damage: 1
-  MaxHealth: 10000
+  MaxHealth: 1000
   Armor: 1
   MaxMana: 10000
   AttackRegen: 2
@@ -236,13 +239,15 @@ MonoBehaviour:
   ShieldRegen: 2
   ManaRegen: 5
   AttackCD: 1
-  Health: 100
-  Mana: 100
+  Health: 1000
+  Mana: 1000
   Shield: {fileID: 7488349628614882635}
   AddHealthParticle: {fileID: 8826541380552368362}
   AddManaParticle: {fileID: 2995549556177670057}
   AddShieldParticle: {fileID: 4447878518664441395, guid: 030c5ce7ccee89c4e8e7b325c47f0af1, type: 3}
   Fibo: 
+  deathImage: {fileID: 0}
+  finalDeathImageColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &7488349628614882635
 MonoBehaviour:
   m_ObjectHideFlags: 0

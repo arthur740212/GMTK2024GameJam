@@ -13,19 +13,19 @@ public enum CapType
 public class Cap : MonoBehaviour
 {
 
-    [SerializeField]
-    private GameObject arena;
+    //[SerializeField]
+    //private GameObject arena;
 
     private float duration = 10.0f;
 
     public int posIndex = -1;
 
-    HatGenerator hatGenerator = null;
+    //HatGenerator hatGenerator = null;
 
-    void Start()
-    {
-        hatGenerator = arena.GetComponent<HatGenerator>();
-    }
+    //void Start()
+    //{
+    //    hatGenerator = arena.GetComponent<HatGenerator>();
+    //}
     public Cap Initialized(int index)
     {
         Type = (CapType)index;
@@ -49,11 +49,17 @@ public class Cap : MonoBehaviour
 
     void Update()
     {
+        int timer = (int)(Time.time);
+        if((timer % 2) ==0)
+            gameObject.transform.position += Vector3.up * Time.deltaTime/2;
+        else
+            gameObject.transform.position += Vector3.down * Time.deltaTime/2;
+        
         Destroy(gameObject, duration);
     }
 
-    void OnDestroy()
-    {
-        hatGenerator.hatPosArray[posIndex].isOccupied = false;
-    }
+    //void OnDestroy()
+    //{
+    //    hatGenerator.hatPosArray[posIndex].isOccupied = false;
+    //}
 }
