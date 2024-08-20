@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class PlayerCapContainer : MonoBehaviour
@@ -41,7 +42,7 @@ public class PlayerCapContainer : MonoBehaviour
     }
 
 
-    public void DecideLevelUp()
+    public async void DecideLevelUp()
     {
         int highestCount = 0;
         List<int> highestTypes = new();
@@ -63,7 +64,10 @@ public class PlayerCapContainer : MonoBehaviour
         Tally upgradeTypeTally = TallyPerCapType[highestTypes[UnityEngine.Random.Range(0, highestTypes.Count)]];
         highestTypes.Clear();
         playerStats.LevelUp(upgradeTypeTally.Type);
+
+        await Task.Delay(400);
         WearCap(upgradeTypeTally.TypeAsInt);
+
 
         FlushAllCaps();
 
@@ -95,12 +99,14 @@ public class PlayerCapContainer : MonoBehaviour
 
     }
 
-    public void CheckOverflowedSets()
+    public async void CheckOverflowedSets()
     {
+
         foreach (var tally in tallyPerCapType)
         {
             if (tally.PassedThreshold())
             {
+                await Task.Delay(400);
                 FlushAllCaps();
                 return;
             }
