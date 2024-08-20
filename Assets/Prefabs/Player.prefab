@@ -154,10 +154,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: -2099468591281039669}
   TallyPrefab: {fileID: 6162628233614298391, guid: c066029765ac34f47a6d8513ebae8f51, type: 3}
-  capModels: []
+  Cloth: {fileID: 0}
+  capModels:
+  - {fileID: 826275618615662661, guid: 8ac3479cac2318c4a9b0aaea6fc79d51, type: 3}
+  - {fileID: 826275618615662661, guid: 3d576be6f42a5cd46a23ae62e8b80533, type: 3}
+  - {fileID: 826275618615662661, guid: 7d368b858311d5f4580b7646a73d1e87, type: 3}
+  - {fileID: 826275618615662661, guid: b9165b13e8e5f3947b53fa074f6de145, type: 3}
   spacing: 0.2
   playerHeadPosY: 1.8
-  capacity: 20
+  defaultClothColor: {r: 0.8773585, g: 0.49483523, b: 0.037246335, a: 0.89411765}
+  dissolveClothColor: {r: 0, g: 0, b: 0, a: 0}
+  capacity: 6
   collectedCaps: []
   tallyPerCapType:
   - {fileID: 0}
@@ -224,9 +231,9 @@ MonoBehaviour:
   Yellow_level: 1
   Blue_level: 1
   Damage: 1
-  MaxHealth: 10000
+  MaxHealth: 100
   Armor: 1
-  MaxMana: 10000
+  MaxMana: 100
   AttackRegen: 2
   HealthRegen: 5
   ShieldRegen: 2
