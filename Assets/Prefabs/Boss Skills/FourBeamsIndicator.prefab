@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7483093993014787061}
   - component: {fileID: 1194545593474047290}
   - component: {fileID: 5341586324948169748}
-  - component: {fileID: 5336085936152589871}
+  - component: {fileID: 7381429972498992200}
   m_Layer: 0
-  m_Name: HalfBladeIndicator
+  m_Name: FourBeamsIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -107,7 +107,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &5336085936152589871
+--- !u!114 &7381429972498992200
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,6 +116,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3477885360574326960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65f4266aa099f8e4596aad356110ad0a, type: 3}
+  m_Script: {fileID: 11500000, guid: 519e4fa2d14b41d4d90a1e300d74ad00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
