@@ -3,10 +3,8 @@ using UnityEngine.UI;
 
 public class UIHealth : MonoBehaviour
 {
-    public RectTransform playerHealth;
-    public RectTransform playerMaxHealth;
-    public RectTransform playerMana;
-    public RectTransform playerMaxMana;
+    public Slider playerHealthSlider;
+    public Slider playerManaSlider;
 
     public RectTransform bossHealth;
     public RectTransform bossMaxHealth;
@@ -28,9 +26,8 @@ public class UIHealth : MonoBehaviour
         currentMana = 0.9f * currentMana + 0.1f * playerStats.Mana;
         currentBossHealth = 0.9f * currentBossHealth + 0.1f * bossStats.BossHealth;
 
-        playerHealth.sizeDelta = new Vector2(1000.0f * currentHealth / playerStats.MaxHealth, 50.0f);
-        playerMana.sizeDelta = new Vector2(1000.0f * currentMana / playerStats.MaxMana, 50.0f);
-        bossHealth.sizeDelta = new Vector2(1000.0f * currentBossHealth / bossStats.BossMaxHealth, 50.0f);
+        playerHealthSlider.value = currentHealth / (float)playerStats.MaxHealth;
+        playerManaSlider.value = currentMana/ (float)playerStats.MaxMana;
 
         playerHealthText.text = $"{playerStats.Health} / {playerStats.MaxHealth}";
         playerManaText.text = $"{playerStats.Mana} / {playerStats.MaxMana}";
