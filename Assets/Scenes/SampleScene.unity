@@ -232,24 +232,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2501074050058837444, guid: 8cbaf3282a4139c4982e036d831df891, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2161.7617
-      objectReference: {fileID: 0}
-    - target: {fileID: 2501074050058837444, guid: 8cbaf3282a4139c4982e036d831df891, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2189.8662
-      objectReference: {fileID: 0}
-    - target: {fileID: 2501074050058837444, guid: 8cbaf3282a4139c4982e036d831df891, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.0165
+      value: -0.0122
       objectReference: {fileID: 0}
     - target: {fileID: 2501074050058837444, guid: 8cbaf3282a4139c4982e036d831df891, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22.45
+      value: -22.81
       objectReference: {fileID: 0}
     - target: {fileID: 2501074050058837444, guid: 8cbaf3282a4139c4982e036d831df891, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.7653
+      value: 1.8342
       objectReference: {fileID: 0}
     - target: {fileID: 2501074050058837444, guid: 8cbaf3282a4139c4982e036d831df891, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10353,17 +10345,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -2099468591281039669, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
-      propertyPath: loseHPSFX
-      value: 
-      objectReference: {fileID: 1709415478}
-    - target: {fileID: -2099468591281039669, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 1599762769}
-    - target: {fileID: -2099468591281039669, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
-      propertyPath: shieldBlockSFX
-      value: 
-      objectReference: {fileID: 1709415477}
     - target: {fileID: 851788375352212942, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10433,16 +10417,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
---- !u!82 &1709415477 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2447464600260522290, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
-  m_PrefabInstance: {fileID: 1709415474}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1709415478 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1660521017026993910, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
-  m_PrefabInstance: {fileID: 1709415474}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1498225453020812398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10584,10 +10558,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 728070690814378442, guid: c185ec966c07e5c4f92cc5f061862973, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5840281049821684409, guid: c185ec966c07e5c4f92cc5f061862973, type: 3}
       propertyPath: m_Name
       value: DeathZone

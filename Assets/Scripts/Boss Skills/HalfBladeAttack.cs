@@ -6,6 +6,9 @@ public class HalfBladeAttack : MonoBehaviour
 {
     public int damage = 100;
     public float duration = 0.2f;
+    [SerializeField]
+    private BossStats bossStats;
+
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("do damage of halfblade");
@@ -22,7 +25,7 @@ public class HalfBladeAttack : MonoBehaviour
             
             if (playerStat != null)
             {
-                playerStat.LoseHealth(damage);
+                playerStat.LoseHealth(damage* bossStats.BossPower);
             }
         }
     }

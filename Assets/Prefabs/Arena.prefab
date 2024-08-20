@@ -220,6 +220,10 @@ MonoBehaviour:
   - {fileID: 826275618615662661, guid: 90610db50dc4c4b4bb8022cd625bc619, type: 3}
   - {fileID: 826275618615662661, guid: 5ce58733e9c49594eaeadccc3860c7ae, type: 3}
   - {fileID: 826275618615662661, guid: 67d39637b10f7e246b887e2130535f0a, type: 3}
+  - {fileID: 826275618615662661, guid: 2e3f95feebeefab44a11c7eb91889eec, type: 3}
+  - {fileID: 826275618615662661, guid: 90610db50dc4c4b4bb8022cd625bc619, type: 3}
+  - {fileID: 826275618615662661, guid: 5ce58733e9c49594eaeadccc3860c7ae, type: 3}
+  - {fileID: 826275618615662661, guid: 2e3f95feebeefab44a11c7eb91889eec, type: 3}
   arena: {fileID: 3668675872572300193}
   areaBlockGameObjects:
   - {fileID: 5783686186339574719}

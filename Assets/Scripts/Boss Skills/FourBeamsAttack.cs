@@ -6,6 +6,9 @@ public class FourBeamsAttack : MonoBehaviour
 {
     public int damage = 100;
     public float duration = 0.5f;
+    
+    [SerializeField]
+    private BossStats bossStats;
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("do damage of circle drop");
@@ -22,7 +25,7 @@ public class FourBeamsAttack : MonoBehaviour
 
             if (playerStat != null)
             {
-                playerStat.LoseHealth(damage);
+                playerStat.LoseHealth(damage * bossStats.BossPower);
             }
         }
     }

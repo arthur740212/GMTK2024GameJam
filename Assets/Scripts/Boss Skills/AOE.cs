@@ -6,6 +6,9 @@ public class AOE : MonoBehaviour
 {
     public int damage = 200;
     private float duration = 3.0f;
+    
+    [SerializeField]
+    private BossStats bossStats;
     //do collision check
     //do dmg
     //destroy self
@@ -38,7 +41,7 @@ public class AOE : MonoBehaviour
 
         if (playerStat != null)
         {
-            playerStat.LoseHealth(damage);
+            playerStat.LoseHealth(damage* bossStats.BossPower);
         }
     }
 }

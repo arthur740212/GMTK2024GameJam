@@ -24,7 +24,7 @@ public class PlayerStats : MonoBehaviour
     public float AttackRegen = 2.0f;
     public float HealthRegen = 1.0f;
     public float ShieldRegen = 2.0f;
-    public float ManaRegen = 3.0f;
+    public float ManaRegen = 4.0f;
 
     public float AttackCD = 1.0f;
     private float HealthCD = 1.0f;
@@ -34,7 +34,7 @@ public class PlayerStats : MonoBehaviour
     public int Health = 100;
     public int Mana = 100;
 
-    private bool shieldOn = false;
+    public bool shieldOn = false;
 
     private int AddHealthAmount = 10;
     private int AddManaAmount = 10;

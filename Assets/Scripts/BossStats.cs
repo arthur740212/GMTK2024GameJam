@@ -10,10 +10,10 @@ public class BossStats : MonoBehaviour
     public int BossMaxHealth = 10000000;
 
     [SerializeField]
-    private int BossPower = 1;
+    public int BossPower = 1;
 
     [SerializeField]
-    private float BossLevelupCD = 60.0f;
+    public float BossLevelupCD = 90.0f;
 
     public float SecondsToBossLevelup = 60.0f; 
 

@@ -262,7 +262,7 @@ MonoBehaviour:
   playerHeadPosY: 1.15
   defaultClothColor: {r: 1, g: 1, b: 1, a: 1}
   dissolveClothColor: {r: 0, g: 0, b: 0, a: 0}
-  capacity: 3
+  capacity: 4
   collectedCaps: []
   tallyPerCapType:
   - {fileID: 0}
@@ -333,17 +333,19 @@ MonoBehaviour:
   Armor: 1
   MaxMana: 10000
   AttackRegen: 2
-  HealthRegen: 5
+  HealthRegen: 7
   ShieldRegen: 20
-  ManaRegen: 5
+  ManaRegen: 7
   AttackCD: 1
   Health: 1000
   Mana: 1000
+  shieldOn: 0
   AddHealthParticle: {fileID: 8826541380552368362}
   AddManaParticle: {fileID: 2995549556177670057}
   AddShieldParticle: {fileID: 1035273571752233477}
   Fibo: 
-  loseHPSFX: {fileID: 0}
+  loseHPSFX: {fileID: 1660521017026993910}
+  shieldBlockSFX: {fileID: 2447464600260522290}
   deathImage: {fileID: 0}
   finalDeathImageColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!82 &1660521017026993910

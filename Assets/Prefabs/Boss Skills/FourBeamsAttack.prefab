@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 150
   duration: 0.2
+  bossStats: {fileID: 620590875619712222, guid: 8377062b4a6b81048a60a3e85948ed05, type: 3}
 --- !u!65 &8727814633079435091
 BoxCollider:
   m_ObjectHideFlags: 0

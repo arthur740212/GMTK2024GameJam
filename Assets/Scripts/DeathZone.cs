@@ -19,7 +19,8 @@ public class DeathZone : MonoBehaviour
 
             if (playerStat != null)
             {
-                playerStat.LoseHealth(32767);
+                playerStat.shieldOn = false;
+                playerStat.LoseHealth(int.MaxValue);
             }
         }
     }

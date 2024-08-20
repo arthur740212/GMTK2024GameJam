@@ -150,10 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8477f21df5c669047be34da7c3a1f73e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BossHealth: 100000
-  BossMaxHealth: 100000
+  BossHealth: 250000
+  BossMaxHealth: 250000
   BossPower: 1
-  BossLevelupCD: 60
+  BossLevelupCD: 90
   SecondsToBossLevelup: 14.4343
   BossAttackPrefab: {fileID: 0}
   BossHitParticle: {fileID: 5170398880696041655}

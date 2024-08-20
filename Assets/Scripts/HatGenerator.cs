@@ -56,7 +56,7 @@ public class HatGenerator : MonoBehaviour
     private void GenerateHatRandomly(int minValue, int maxValue)
     {
         posIndex = Random.Range(minValue, maxValue);
-        hatIndex = Random.Range(0, 4);
+        hatIndex = Random.Range(0, 8);
         
         //while(hatPosArray[posIndex].isOccupied == true)
         //{
@@ -70,7 +70,7 @@ public class HatGenerator : MonoBehaviour
         var Pos = hatPosArray[posIndex].pos;
         hatPosArray[posIndex].isOccupied = true;
 
-        Pos.y = arena.transform.position.y + 0.5f;
+        Pos.y = arena.transform.position.y + 0.75f;
         GameObject hat = Instantiate(hatPrefab[hatIndex], Pos, transform.rotation);
         Cap hatStat =  hat.GetComponent<Cap>();
         hatStat.posIndex = posIndex;

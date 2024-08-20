@@ -81,6 +81,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 100
+  bossStats: {fileID: 620590875619712222, guid: 8377062b4a6b81048a60a3e85948ed05, type: 3}
 --- !u!1001 &1470223693175058102
 PrefabInstance:
   m_ObjectHideFlags: 0
