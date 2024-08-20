@@ -5481,6 +5481,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1446586934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4128166677215951871, guid: c517409892658b14c88dc1d2713bf839, type: 3}
+  m_PrefabInstance: {fileID: 8294016626619696333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1597088531 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6022705371963002299, guid: c517409892658b14c88dc1d2713bf839, type: 3}
@@ -5490,6 +5501,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52e311287fb442644be7615b13773652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1599762769 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1500944974439169360, guid: c517409892658b14c88dc1d2713bf839, type: 3}
+  m_PrefabInstance: {fileID: 8294016626619696333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1649437496
@@ -10330,6 +10352,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2099468591281039669, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 1599762769}
     - target: {fileID: 851788375352212942, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10464,6 +10490,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 620590875619712222, guid: 8377062b4a6b81048a60a3e85948ed05, type: 3}
+      propertyPath: winImage
+      value: 
+      objectReference: {fileID: 1446586934}
     - target: {fileID: 2149026588806715321, guid: 8377062b4a6b81048a60a3e85948ed05, type: 3}
       propertyPath: m_Name
       value: Boss
