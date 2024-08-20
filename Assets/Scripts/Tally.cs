@@ -6,6 +6,10 @@ public class Tally : MonoBehaviour
     public float TallyScaleRate = 10.0f;
     public Material material;
 
+    public Slider slider;
+    public float sliderTargetValue;
+    public float sliderCurrentValue;
+
     public float currentSize;
     public float targetSize;
     public Tally Initialized(CapType type)
@@ -33,6 +37,8 @@ public class Tally : MonoBehaviour
     private void UpdateTallyVisual()
     {
         targetSize = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate;
+        sliderTargetValue = (float)pcc.TallyPerCapType[TypeAsInt].Count / Threshold;
+
 
         //Vector3 pos = transform.localPosition;
         //pos.y = pcc.TallyPerCapType[TypeAsInt].Count * TallyScaleRate * 0.5f;
@@ -52,6 +58,15 @@ public class Tally : MonoBehaviour
         {
             currentSize = 0.1f * targetSize + 0.9f * currentSize;
             rectTransform.sizeDelta = new Vector2(rectTransform.sizeDelta.x, currentSize);
+        }
+
+        if (slider != null) 
+        {
+            sliderCurrentValue = slider.value;
+            if (Mathf.Abs(sliderCurrentValue - sliderTargetValue) > 0.001f) 
+            {
+                slider.value = Mathf.Lerp(sliderCurrentValue, sliderTargetValue, 0.1f);
+            }
         }
     }
     public int Count;
