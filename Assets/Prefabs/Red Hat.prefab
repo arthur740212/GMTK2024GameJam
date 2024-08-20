@@ -121,7 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arena: {fileID: 3668675872572300193, guid: 3f152b0d81b98964bb852fd6697310eb, type: 3}
-  duration: 5
   posIndex: -1
   capCollider: {fileID: 9218565497914468229}
   mover: {fileID: -2970284059198227010}
@@ -138,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: becec1a82ad325a4c9f6d145b16c3212, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 2129527997287681679}
   objectToMove: {fileID: 0}
   uiTarget: {fileID: 0}
   nearPlaneOffset: 5

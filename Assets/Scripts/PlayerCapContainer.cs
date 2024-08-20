@@ -107,7 +107,6 @@ public class PlayerCapContainer : MonoBehaviour
     {
         for (int i = collectedCaps.Count - 1; i >= 0; i--)
         {
-            Destroy(collectedCaps[i].gameObject);
             collectedCaps.Remove(collectedCaps[i]);
         }
 
