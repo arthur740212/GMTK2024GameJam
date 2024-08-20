@@ -45,6 +45,9 @@ public class PlayerStats : MonoBehaviour
 
     public List<int> Fibo = new List<int>();
 
+    public AudioSource loseHPSFX;
+    public AudioSource shieldBlockSFX;
+
     private void Update()
     {
         AttackCD -= Time.deltaTime;
@@ -109,10 +112,12 @@ public class PlayerStats : MonoBehaviour
             AddShieldParticle.Stop();
             AddShieldParticle.Clear();
             Debug.Log("ShieldBroke");
+            shieldBlockSFX.Play();
         }
         else
         {
             Health -= damage;
+            loseHPSFX.Play();
         }
 
         if (Health <= 0) 
