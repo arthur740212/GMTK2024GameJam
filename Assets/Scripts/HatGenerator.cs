@@ -46,7 +46,7 @@ public class HatGenerator : MonoBehaviour
     void Update()
     {
         timepass += Time.deltaTime;
-        if(timepass >= 5.0f)
+        if(timepass >= 2.0f)
         {
             GenerateHatRandomly(0,16);
             timepass = 0.0f;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AOE : MonoBehaviour
 {
-    private int damage = 450;
+    public int damage = 200;
     private float duration = 3.0f;
     //do collision check
     //do dmg

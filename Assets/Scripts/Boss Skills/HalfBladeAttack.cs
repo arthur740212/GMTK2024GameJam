@@ -5,7 +5,7 @@ using UnityEngine;
 public class HalfBladeAttack : MonoBehaviour
 {
     public int damage = 100;
-    public float duration = 3.0f;
+    public float duration = 0.2f;
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("do damage of halfblade");

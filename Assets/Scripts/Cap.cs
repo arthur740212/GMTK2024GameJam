@@ -16,7 +16,7 @@ public class Cap : MonoBehaviour
     [SerializeField]
     private GameObject arena;
 
-    private float duration = 20.0f;
+    private float duration = 10.0f;
 
     public int posIndex = -1;
 
@@ -34,10 +34,13 @@ public class Cap : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        mover.OnMoveComplete += () => other.gameObject.GetComponent<PlayerCapContainer>().AddCap(this);
+        if (other.gameObject.tag == "Player")
+        {
+            mover.OnMoveComplete += () => other.gameObject.GetComponent<PlayerCapContainer>().AddCap(this);
 
-        capCollider.enabled = false;
-        mover.enabled = true;
+            //capCollider.enabled = false;
+            mover.enabled = true;
+        }
     }
 
     public Collider capCollider;
