@@ -19,11 +19,12 @@ public class PlayerStats : MonoBehaviour
     public int Armor = 1;
     public int MaxMana = 10000;
 
-    public float Projectiles;
-    public float HealthRegen=1.0f;
-    public float ShieldRegen=2.0f;
-    public float ManaRegen=3.0f;
+    public float AttackRegen = 2.0f;
+    public float HealthRegen = 1.0f;
+    public float ShieldRegen = 2.0f;
+    public float ManaRegen = 3.0f;
 
+    public float AttackCD = 1.0f;
     private float HealthCD = 1.0f;
     private float ShieldCD = 2.0f;
     private float ManaCD = 3.0f;
@@ -37,11 +38,13 @@ public class PlayerStats : MonoBehaviour
 
     public ParticleSystem AddHealthParticle;
     public ParticleSystem AddManaParticle;
+    public ParticleSystem AddShieldParticle;
 
     public List<int> Fibo = new List<int>();
 
     private void Update()
     {
+        AttackCD -= Time.deltaTime;
         HealthCD -= Time.deltaTime;
         ShieldCD -= Time.deltaTime;
         ManaCD -= Time.deltaTime;
@@ -52,40 +55,55 @@ public class PlayerStats : MonoBehaviour
             HealthCD += HealthRegen;
         }
 
-        if (ShieldCD < 0.0f) 
+        if (ShieldCD < 0.0f)
         {
             ApplyShield();
             ShieldCD += ShieldRegen;
         }
-        if (ManaCD < 0.0f) 
+        if (ManaCD < 0.0f)
         {
             AddMana();
-            ManaCD += ManaRegen; 
+            ManaCD += ManaRegen;
         }
     }
 
     private void AddHealth()
     {
-        AddHealthParticle.Play();
+        if (!AddHealthParticle.isPlaying) 
+        {
+            AddHealthParticle.Play();
+        }
         Health += AddHealthAmount;
         Health = Mathf.Min(Health, MaxHealth);
     }
 
     private void ApplyShield()
     {
+        if (!AddShieldParticle.isPlaying)
+        {
+            AddShieldParticle.Play();
+        }
         Debug.Log("New Shilewed");
         Shield.shieldOn = true;
     }
     private void AddMana()
     {
-        AddManaParticle.Play();
+        if (!AddManaParticle.isPlaying)
+        {
+            AddManaParticle.Play();
+        }
         Mana += AddManaAmount;
         Mana = Mathf.Min(Mana, MaxMana);
     }
 
-    public void LoseHealth(int damage) 
+    public void LoseHealth(int damage)
     {
         Health -= damage;
+    }
+
+    public void LoseMana(int deplete)
+    {
+        Mana -= deplete;
     }
     private void FiboInit()
     {
@@ -110,13 +128,28 @@ public class PlayerStats : MonoBehaviour
                 Damage += Red_level;
                 break;
             case CapType.Green:
-                MaxHealth += Fibo[Green_level];
+                if (Green_level < 40)
+                {
+                    MaxHealth += Fibo[Green_level];
+                }
+                else 
+                {
+                    MaxHealth = int.MaxValue;
+                }
                 break;
             case CapType.Yellow:
                 Armor += Yellow_level * 2;
                 break;
             case CapType.Blue:
-                MaxMana += Fibo[Blue_level];
+                if (Blue_level < 40)
+                {
+                    MaxMana += Fibo[Blue_level];
+
+                }
+                else
+                {
+                    MaxMana = int.MaxValue;
+                }
                 break;
         }
     }
@@ -127,22 +160,21 @@ public class PlayerStats : MonoBehaviour
         {
             case CapType.Red:
                 Red_level++;
+                AttackRegen = Red_Stat.Evaluate(Red_level);
                 break;
             case CapType.Green:
                 Green_level++;
-                HealthRegen = Green_Stat.Value;
+                HealthRegen = Green_Stat.Evaluate(Green_level);
                 break;
             case CapType.Yellow:
                 Yellow_level++;
-                ShieldRegen = Yellow_Stat.Value;
+                ShieldRegen = Yellow_Stat.Evaluate(Yellow_level);
                 break;
             case CapType.Blue:
                 Blue_level++;
-                ManaRegen = Blue_Stat.Value;
+                ManaRegen = Blue_Stat.Evaluate(Blue_level);
                 break;
         }
     }
-
-
 
 }

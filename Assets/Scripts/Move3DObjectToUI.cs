@@ -11,6 +11,9 @@ public class Move3DObjectToUI : MonoBehaviour
     public float movementSpeed = 50.0f;
 
     public Action OnMoveComplete;
+
+    public AudioSource pickUpSFX;
+
     private void Start()
     {
         objectToMove = this.gameObject.transform;
@@ -24,6 +27,7 @@ public class Move3DObjectToUI : MonoBehaviour
                 Debug.LogError("No RectTransform found on the GameObject named UITargetImage");
             }
         }
+        pickUpSFX.Play();
     }
 
     void Update()

@@ -11,12 +11,13 @@ public class Shield : MonoBehaviour
             if (shieldOn)
             {
                 shieldOn = false;
+                playerStats.AddShieldParticle.Stop();
+                playerStats.AddShieldParticle.Clear();
                 Debug.Log("ShieldBroke");
             }
 
             else
             {
-
                 Debug.Log("Lose Health");
                 playerStats.LoseHealth(5);
             }

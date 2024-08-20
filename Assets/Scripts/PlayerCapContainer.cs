@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class PlayerCapContainer : MonoBehaviour
@@ -41,7 +42,7 @@ public class PlayerCapContainer : MonoBehaviour
     }
 
 
-    public void DecideLevelUp()
+    public async void DecideLevelUp()
     {
         int highestCount = 0;
         List<int> highestTypes = new();
@@ -60,10 +61,30 @@ public class PlayerCapContainer : MonoBehaviour
             }
         }
 
-        playerStats.LevelUp(TallyPerCapType[highestTypes[UnityEngine.Random.Range(0, highestTypes.Count)]].Type);
+        Tally upgradeTypeTally = TallyPerCapType[highestTypes[UnityEngine.Random.Range(0, highestTypes.Count)]];
+        highestTypes.Clear();
+        playerStats.LevelUp(upgradeTypeTally.Type);
+
+        await Task.Delay(400);
+        WearCap(upgradeTypeTally.TypeAsInt);
+
 
         FlushAllCaps();
 
+    }
+
+    public List<GameObject> capModels;
+    private int WornCapCount = 0;
+    public float spacing = 0.2f;
+    public float playerHeadPosY = 1.8f;
+
+    public void WearCap(int TypeAsInt) 
+    {
+        Vector3 pos = Vector3.zero;
+        pos.y = playerHeadPosY + WornCapCount * spacing;
+        var newCap = Instantiate(capModels[TypeAsInt], transform);
+        newCap.transform.localPosition = pos;
+        WornCapCount++;
     }
 
     public void FlushAllCaps()
@@ -78,12 +99,14 @@ public class PlayerCapContainer : MonoBehaviour
 
     }
 
-    public void CheckOverflowedSets()
+    public async void CheckOverflowedSets()
     {
+
         foreach (var tally in tallyPerCapType)
         {
             if (tally.PassedThreshold())
             {
+                await Task.Delay(400);
                 FlushAllCaps();
                 return;
             }
