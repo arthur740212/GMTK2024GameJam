@@ -10420,6 +10420,10 @@ PrefabInstance:
       propertyPath: tallyPerCapType.Array.data[3]
       value: 
       objectReference: {fileID: 597198529}
+    - target: {fileID: 8101177824207792736, guid: f2282eaa5bdc472419a97e395c9c4eca, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
