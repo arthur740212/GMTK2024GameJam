@@ -5,6 +5,7 @@ public class UIHealth : MonoBehaviour
 {
     public Slider playerHealthSlider;
     public Slider playerManaSlider;
+    public Slider BossHealthSlider;
 
     public RectTransform bossHealth;
     public RectTransform bossMaxHealth;
@@ -28,6 +29,7 @@ public class UIHealth : MonoBehaviour
 
         playerHealthSlider.value = currentHealth / (float)playerStats.MaxHealth;
         playerManaSlider.value = currentMana/ (float)playerStats.MaxMana;
+        BossHealthSlider.value = currentBossHealth / (float)bossStats.BossMaxHealth;
 
         playerHealthText.text = $"{playerStats.Health} / {playerStats.MaxHealth}";
         playerManaText.text = $"{playerStats.Mana} / {playerStats.MaxMana}";
